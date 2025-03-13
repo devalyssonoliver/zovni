@@ -1,0 +1,16 @@
+object DM_Localidade: TDM_Localidade
+  Height = 480
+  Width = 640
+  object fdqryEstados: TFDQuery
+    Connection = DM_Gerenciador.fdConnection
+    SQL.Strings = (
+      'SELECT id, nome FROM estado ORDER BY nome;'
+      '')
+    Left = 216
+    Top = 112
+  end
+  object fdqryCidades: TFDQuery
+    Left = 408
+    Top = 112
+  end
+end

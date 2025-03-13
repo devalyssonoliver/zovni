@@ -1,0 +1,20 @@
+# Ignorar diretórios de histórico do Delphi
+__history/
+
+# Ignorar arquivos binários e temporários comuns no Delphi
+*.dcu
+*.~*
+*.ddp
+*.dsk
+*.local
+*.identcache
+*.tvsconfig
+*.log
+*.map
+*.bak
+*.cfg
+*.groupproj.local
+*.stat
+
+# Ignorar configurações de IDEs
+*.idea/

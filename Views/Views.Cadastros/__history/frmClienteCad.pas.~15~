@@ -1,0 +1,197 @@
+unit frmClienteCad;
+
+interface
+
+uses
+  Winapi.Windows, System.Classes, Vcl.Controls, Vcl.Forms, Vcl.ExtCtrls,
+  Vcl.StdCtrls, Vcl.DBCtrls, Vcl.Mask, Vcl.ComCtrls, Data.DB, Vcl.Buttons,
+  dmClienteCad, UFuncoesAuxiliares, Vcl.Imaging.pngimage, System.SysUtils,
+  System.ImageList, Vcl.ImgList, dmLocalidade;
+
+type
+  TModoOperacao = (tpNovo, tpEditar, tpExibir);
+
+  TFrm_ClientesCad = class(TForm)
+    pnlTopo: TPanel;
+    pnlBaixo: TPanel;
+    pnlMeio: TPanel;
+    dsClienteCad: TDataSource;
+    pgCad: TPageControl;
+    tsCadastro: TTabSheet;
+    grpInfo: TGroupBox;
+    lblNome: TLabel;
+    lblCNPJ: TLabel;
+    lblCPF: TLabel;
+    lblTipo: TLabel;
+    lblTelefone: TLabel;
+    dbedtCPF: TDBEdit;
+    dbedtCNPJ: TDBEdit;
+    dbcbbTipo: TDBComboBox;
+    dbedtTelefone: TDBEdit;
+    dbedtNome: TDBEdit;
+    dbedtId: TDBEdit;
+    btnSalvar: TBitBtn;
+    btnNovo: TBitBtn;
+    btnEditar: TBitBtn;
+    btnFechar: TBitBtn;
+    lblTITULO: TLabel;
+    imgicon: TImage;
+    grpLocalizacaoInfo: TGroupBox;
+    lblEndereco: TLabel;
+    lblCEP: TLabel;
+    lblCidade: TLabel;
+    lblNumero: TLabel;
+    dbedtEndereco: TDBEdit;
+    dbedtCEP: TDBEdit;
+    dbedtNumero: TDBEdit;
+    dbedtBairro: TDBEdit;
+    lblBairro: TLabel;
+    dbedtSaldo: TDBEdit;
+    lblSaldo: TLabel;
+    dbchkAtivo: TDBCheckBox;
+    btnCancelar: TBitBtn;
+    il: TImageList;
+    lblEstado: TLabel;
+    dsCidade: TDataSource;
+    dbcbbnome: TDBComboBox;
+    dbcbbEstado: TDBComboBox;
+    dsEstado: TDataSource;
+
+    procedure dbcbbTipoClick(Sender: TObject);
+    procedure btnNovoClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
+    procedure btnSalvarClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
+    procedure btnFecharClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+    procedure dbcbbEstadoChange(Sender: TObject);
+
+
+  private
+    { Private declarations }
+    FClienteCad: TDM_ClientesCad;
+  public
+    { Public declarations }
+    procedure AlterarModoOperacao(Modo: TModoOperacao);
+    procedure CarregarCliente(_Codigo : Integer);
+  end;
+
+var
+  Frm_ClientesCad: TFrm_ClientesCad;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrm_ClientesCad.AlterarModoOperacao(Modo: TModoOperacao);
+begin
+  case Modo of
+    tpNovo, tpEditar:
+      begin
+        if Modo = tpNovo then
+          FClienteCad.Inserir
+        else
+          FClienteCad.Editar;
+
+        grpInfo.Enabled := True;
+        grpLocalizacaoInfo.Enabled := True;
+        DefinirEstadoBotoes([btnNovo, btnEditar], False);
+        DefinirEstadoBotoes([btnSalvar, btnCancelar, btnFechar], True);
+      end;
+
+    tpExibir:
+      begin
+        grpInfo.Enabled := False;
+        grpLocalizacaoInfo.Enabled := False;
+        DefinirEstadoBotoes([btnNovo, btnEditar, btnFechar], True);
+        DefinirEstadoBotoes([btnSalvar, btnCancelar], False);
+      end;
+  end;
+end;
+
+procedure TFrm_ClientesCad.btnCancelarClick(Sender: TObject);
+begin
+  AlterarModoOperacao(tpExibir);
+  FClienteCad.Cancelar;
+
+end;
+
+procedure TFrm_ClientesCad.btnEditarClick(Sender: TObject);
+begin
+  AlterarModoOperacao(tpEditar);
+end;
+
+
+procedure TFrm_ClientesCad.btnFecharClick(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TFrm_ClientesCad.btnNovoClick(Sender: TObject);
+begin
+  AlterarModoOperacao(tpNovo);
+end;
+
+procedure TFrm_ClientesCad.btnSalvarClick(Sender: TObject);
+begin
+  FClienteCad.Salvar;
+  AlterarModoOperacao(tpExibir);
+end;
+
+procedure TFrm_ClientesCad.CarregarCliente(_Codigo: Integer);
+begin
+  FClienteCad.ExibirCliente(_Codigo);
+end;
+
+procedure TFrm_ClientesCad.dbcbbEstadoChange(Sender: TObject);
+begin
+  if DM_Localidade.fdqryEstados.Active and (DM_Localidade.fdqryEstados.RecordCount > 0) then
+  begin
+    DM_Localidade.CarregarCidades(DM_Localidade.fdqryEstados.FieldByName('id').AsInteger);
+
+    // Associa o TDBComboBox de cidades ao dataset de cidades
+    dbcbbnome.DataSource := dsCidade;
+    dbcbbnome.DataField := 'nome'; // Nome do campo da cidade
+end;
+end;
+
+procedure TFrm_ClientesCad.dbcbbTipoClick(Sender: TObject);
+begin
+  dbedtCPF.Visible  := False;
+  dbedtCNPJ.Visible := False;
+  lblCPF.Visible    := False;
+  lblCNPJ.Visible   := False;
+
+  case dbcbbTipo.ItemIndex of
+    0:  // Pessoa Física
+      begin
+        dbedtCPF.Visible := True;
+        lblCPF.Visible := True;
+      end;
+
+    1:  // Pessoa Jurídica
+      begin
+        dbedtCNPJ.Visible := True;
+        lblCNPJ.Visible := True;
+      end;
+  end;
+end;
+
+
+procedure TFrm_ClientesCad.FormCreate(Sender: TObject);
+begin
+  FClienteCad := TDM_ClientesCad.Create(nil);
+  dsClienteCad.DataSet := FClienteCad.fdqryClientesLoc;
+
+  DM_Localidade.CarregarEstados;
+end;
+
+procedure TFrm_ClientesCad.FormDestroy(Sender: TObject);
+begin
+  dsClienteCad.DataSet := nil;
+  FreeAndNil(FClienteCad);
+end;
+
+end.
+
