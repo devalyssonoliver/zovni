@@ -16,7 +16,6 @@ type
     lblSenha: TLabel;
     lbBemVindo: TLabel;
     btnCancelar: TBitBtn;
-    lnklblCadastrar: TLinkLabel;
     procedure btnLoginClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
@@ -46,11 +45,12 @@ begin
    begin
     Application.MessageBox(PChar('Bem-vindo ' + edtLogin.Text), 'ZOnvio', MB_OK);
     Close;
+    ModalResult := mrOk;
    end
    else
    begin
-    Application.MessageBox('Login inválido', 'ZOvni', MB_OK);
-    Exit;
+    Application.MessageBox('Login inválido', 'ZOvni', MB_ICONWARNING);
+    ModalResult := mrNone;
    end;
 
 end;

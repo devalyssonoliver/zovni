@@ -44,12 +44,11 @@ type
     procedure btnSalvarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure btnFecharClick(Sender: TObject);
+    procedure dbgrdCompraProdEnter(Sender: TObject);
     procedure dbgrdCompraProdColExit(Sender: TObject);
   private
-
     procedure AlterarModoOperacao(Modo: TModoOperacao);
   public
-
     procedure Exibir(_Codigo: Integer);
   end;
 
@@ -64,6 +63,8 @@ implementation
 procedure TFrm_CompraCad.FormCreate(Sender: TObject);
 begin
   FCompra := TDMCompra_Cad.Create(nil);
+  dsCompra.DataSet := FCompra.fdqryCompra;
+  dsProdutosGRID.DataSet := FCompra.fdqryCompraProd;
 end;
 
 procedure TFrm_CompraCad.FormDestroy(Sender: TObject);
@@ -110,6 +111,8 @@ end;
 procedure TFrm_CompraCad.btnSalvarClick(Sender: TObject);
 begin
   FCompra.SalvarCompra;
+  dsProdutosGRID.AutoEdit := True;
+  dsProdutosGRID.DataSet := FCompra.fdqryCompraProd;
   AlterarModoOperacao(tpExibir);
 end;
 
@@ -126,6 +129,12 @@ end;
 procedure TFrm_CompraCad.Exibir(_Codigo: Integer);
 begin
   FCompra.ExibirCompra(_Codigo);
+end;
+
+procedure TFrm_CompraCad.dbgrdCompraProdEnter(Sender: TObject);
+begin
+  if FCompra.fdqryCompra.State in [dsInsert, dsEdit] then
+    FCompra.fdqryCompra.Post;
 end;
 
 procedure TFrm_CompraCad.dbgrdCompraProdColExit(Sender: TObject);

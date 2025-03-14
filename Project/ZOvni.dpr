@@ -41,8 +41,15 @@ begin
   Application.CreateForm(TDM_Gerenciador, DM_Gerenciador);
   try
     DM_Gerenciador.fdConnection.Connected := True;
-    Application.CreateForm(TFrm_Principal, Frm_Principal);
-    Application.Run;
+    Application.CreateForm(TFrm_Loginn, Frm_Loginn);
+    if Frm_Loginn.ShowModal = mrOk then
+     begin
+      FreeAndNil(Frm_Loginn);
+      Application.CreateForm(TFrm_Principal, Frm_Principal);
+      Application.Run;
+     end
+      else
+      Application.Terminate;
   except
     on E: Exception do
     begin

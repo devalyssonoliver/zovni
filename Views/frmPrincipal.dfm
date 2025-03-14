@@ -59,7 +59,6 @@ object Frm_Principal: TFrm_Principal
       Width = 1344
       Height = 24
       ActionManager = actmgr2
-      ExplicitTop = 1
     end
     object Cadastros: TRibbonPage
       Left = 0

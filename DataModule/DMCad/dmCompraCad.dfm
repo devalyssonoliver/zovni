@@ -13,11 +13,6 @@ object DMCompra_Cad: TDMCompra_Cad
       '')
     Left = 416
     Top = 200
-    object fldCompraid_compra: TIntegerField
-      FieldName = 'id_compra'
-      Origin = 'id_compra'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-    end
     object bcdfldCompravalor_total: TBCDField
       FieldName = 'valor_total'
       Origin = 'valor_total'
@@ -39,11 +34,19 @@ object DMCompra_Cad: TDMCompra_Cad
       FieldName = 'id_fornecedor'
       Origin = 'id_fornecedor'
     end
+    object fldCompraid_compra: TIntegerField
+      FieldName = 'id_compra'
+      Origin = 'id_compra'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
   end
   object fdqryCompraProd: TFDQuery
     Active = True
+    BeforePost = fdqryCompraProdBeforePost
+    OnNewRecord = fdqryCompraProdNewRecord
     Connection = DM_Gerenciador.fdConnection
     Transaction = fdTransaction
+    UpdateOptions.AssignedValues = [uvEInsert]
     SQL.Strings = (
       'select * from compra_prod'
       '')
@@ -57,16 +60,6 @@ object DMCompra_Cad: TDMCompra_Cad
     object fldCompraProdid_compra: TIntegerField
       FieldName = 'id_compra'
       Origin = 'id_compra'
-    end
-    object strngfldCompraProdnomeproduto: TStringField
-      FieldKind = fkLookup
-      FieldName = 'nomeproduto'
-      LookupDataSet = fdqryProdutos
-      LookupKeyFields = 'id'
-      LookupResultField = 'nome'
-      KeyFields = 'id_produto'
-      Size = 100
-      Lookup = True
     end
     object fldCompraProdid_produto: TIntegerField
       FieldName = 'id_produto'
@@ -96,17 +89,17 @@ object DMCompra_Cad: TDMCompra_Cad
       'SELECT id, nome, custo, preco  FROM produtos')
     Left = 288
     Top = 192
-    object fdqryProdutosid: TIntegerField
+    object fldProdutosid: TIntegerField
       FieldName = 'id'
       Origin = 'id'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
-    object fdqryProdutosnome: TWideStringField
+    object wdstrngfldProdutosnome: TWideStringField
       FieldName = 'nome'
       Origin = 'nome'
       Size = 100
     end
-    object fdqryProdutoscusto: TBCDField
+    object bcdfldProdutoscusto: TBCDField
       FieldName = 'custo'
       Origin = 'custo'
       Precision = 10
@@ -120,6 +113,7 @@ object DMCompra_Cad: TDMCompra_Cad
     end
   end
   object fdTransaction: TFDTransaction
+    Options.AutoStop = False
     Connection = DM_Gerenciador.fdConnection
     Left = 232
     Top = 304

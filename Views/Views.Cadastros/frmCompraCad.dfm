@@ -26,7 +26,6 @@ object Frm_CompraCad: TFrm_CompraCad
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
-    ExplicitWidth = 689
     object lblTITULO: TLabel
       AlignWithMargins = True
       Left = 90
@@ -103,7 +102,6 @@ object Frm_CompraCad: TFrm_CompraCad
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
-      ReadOnly = True
       TabOrder = 0
       StyleName = 'Windows'
     end
@@ -119,7 +117,6 @@ object Frm_CompraCad: TFrm_CompraCad
     ParentBackground = False
     TabOrder = 4
     StyleName = 'Windows'
-    ExplicitWidth = 689
     object btnSalvar: TBitBtn
       Left = 165
       Top = 6
@@ -343,7 +340,6 @@ object Frm_CompraCad: TFrm_CompraCad
     ParentBackground = False
     TabOrder = 1
     StyleName = 'Windows'
-    ExplicitWidth = 689
     object lblForncedorId: TLabel
       Left = 11
       Top = 6
@@ -426,7 +422,6 @@ object Frm_CompraCad: TFrm_CompraCad
     ParentBackground = False
     TabOrder = 3
     StyleName = 'Windows'
-    ExplicitWidth = 689
     object lblValorCompra: TLabel
       Left = 605
       Top = 3

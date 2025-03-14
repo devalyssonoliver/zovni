@@ -4,7 +4,7 @@ object Frm_Loginn: TFrm_Loginn
   BorderIcons = []
   BorderStyle = bsSingle
   Caption = 'Login'
-  ClientHeight = 259
+  ClientHeight = 235
   ClientWidth = 250
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -14,18 +14,20 @@ object Frm_Loginn: TFrm_Loginn
   Font.Style = []
   Position = poDesktopCenter
   StyleName = 'Windows11 White Smoke'
+  ShowInTaskBar = True
   OnCreate = FormCreate
   TextHeight = 15
   object pnlFundo: TPanel
     Left = 0
     Top = 0
     Width = 250
-    Height = 259
+    Height = 235
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
+    ExplicitHeight = 259
     object lblLogin: TLabel
       Left = 10
       Top = 78
@@ -55,9 +57,9 @@ object Frm_Loginn: TFrm_Loginn
     object lbBemVindo: TLabel
       Left = 28
       Top = 32
-      Width = 189
+      Width = 178
       Height = 25
-      Caption = 'Bem Vindo ao ZOnvio!'
+      Caption = 'Bem Vindo ao ZOvni!'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
@@ -164,23 +166,6 @@ object Frm_Loginn: TFrm_Loginn
       TabOrder = 3
       StyleName = 'Windows11 White Smoke'
       OnClick = btnCancelarClick
-    end
-    object lnklblCadastrar: TLinkLabel
-      Left = 80
-      Top = 239
-      Width = 98
-      Height = 19
-      Caption = 'Cadastre-se aqui! '
-      Color = clHighlight
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clOldlace
-      Font.Height = -13
-      Font.Name = 'Tahoma'
-      Font.Style = []
-      ParentColor = False
-      ParentFont = False
-      TabOrder = 4
-      UseVisualStyle = True
     end
   end
 end

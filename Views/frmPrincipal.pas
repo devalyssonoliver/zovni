@@ -74,14 +74,6 @@ begin
   finally
     FreeAndNil(Form1);
   end;
-
-
-  FormLogin := TFrm_Loginn.Create(nil);
-  try
-    FormLogin.ShowModal;
-  finally
-    FreeAndNil(FormLogin);
-  end;
 end;
 
 
