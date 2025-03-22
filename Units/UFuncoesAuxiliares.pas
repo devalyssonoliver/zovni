@@ -4,11 +4,11 @@ interface
 
 uses
   Vcl.Buttons, Vcl.DBCtrls, Winapi.Windows, Vcl.Forms, Vcl.Controls;
-function VerificarPreenchimentoObrigatorios(const Edits: array of TDBEdit ): Boolean;
+function VerificarPreenchimentoObrigatorio(const Edits: array of TDBEdit ): Boolean;
 procedure DefinirEstadoBotoes(const Botoes: array of TBitBtn; Ativo: Boolean);
 
 implementation
-function VerificarPreenchimentoObrigatorios(const Edits: array of TDBEdit ): Boolean;
+function VerificarPreenchimentoObrigatorio(const Edits: array of TDBEdit ): Boolean;
 var
   I : Integer;
 begin

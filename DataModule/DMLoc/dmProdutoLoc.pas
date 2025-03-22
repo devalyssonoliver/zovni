@@ -10,6 +10,7 @@ uses
 
 type
   TModoBusca = (mdCodigo, mdNome);
+
   TDM_ProdutoLoc = class(TDataModule)
     fdqryProdutoLoc: TFDQuery;
     fldProdutoLocid: TIntegerField;
@@ -22,8 +23,8 @@ type
     { Private declarations }
   public
     { Public declarations }
-  procedure Buscar(Campo : Variant;Modo: TModoBusca);
-   procedure Excluir;
+    procedure Buscar(Campo: Variant; Modo: TModoBusca);
+    procedure Excluir;
   end;
 
 var
@@ -40,18 +41,19 @@ implementation
 procedure TDM_ProdutoLoc.Buscar(Campo: Variant; Modo: TModoBusca);
 begin
   fdqryProdutoLoc.Close;
+  fdqryProdutoLoc.SQL.Clear;
   fdqryProdutoLoc.SQL.Text := 'SELECT * FROM produtos WHERE ';
 
   case Modo of
     mdCodigo:
       begin
-        fdqryProdutoLoc.SQL.Text := fdqryProdutoLoc.SQL.Text + 'id = :id';
-        fdqryProdutoLoc.Params.ParamByName('id').Value := Campo;
+        fdqryProdutoLoc.SQL.Add('id = :id');
+        fdqryProdutoLoc.Params.ParamByName('id').AsInteger;
       end;
     mdNome:
       begin
-        fdqryProdutoLoc.SQL.Text := fdqryProdutoLoc.SQL.Text + 'nome ILIKE :nome';
-        fdqryProdutoLoc.Params.ParamByName('nome').Value := '%' + Campo + '%';
+        fdqryProdutoLoc.SQL.Add('nome ILIKE :nome');
+        fdqryProdutoLoc.Params.ParamByName('nome').AsString;
       end;
   end;
 
@@ -67,3 +69,4 @@ begin
 end;
 
 end.
+

@@ -199,11 +199,6 @@
             <Form>Frm_CompraCad</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="..\DataModule\DMCad\dmCompraCad.pas">
-            <Form>DMCompra_Cad</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TDataModule</DesignClass>
-        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

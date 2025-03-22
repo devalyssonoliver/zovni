@@ -9,6 +9,7 @@ object DM_Gerenciador: TDM_Gerenciador
       'Password=postzeus2011'
       'Port=5433'
       'DriverID=PG')
+    TxOptions.AutoStop = False
     ConnectedStoredUsage = [auDesignTime]
     Connected = True
     Left = 408

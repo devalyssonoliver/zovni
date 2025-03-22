@@ -3,12 +3,13 @@ unit frmPrincipal;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Ribbon, Vcl.ActnCtrls, Vcl.ToolWin,
-  Vcl.ActnMan, Vcl.ActnMenus, Vcl.RibbonActnMenus, System.Actions, Vcl.ActnList,
-  Vcl.RibbonSilverStyleActnCtrls, Vcl.PlatformDefaultStyleActnCtrls,
-  Vcl.RibbonLunaStyleActnCtrls, Vcl.RibbonObsidianStyleActnCtrls, Vcl.Buttons,
-  Vcl.ComCtrls, Vcl.Menus, Vcl.ExtCtrls, frmClienteLoc, frmProdutoLoc, frmLogin;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Ribbon,
+  Vcl.ActnCtrls, Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnMenus, Vcl.RibbonActnMenus,
+  System.Actions, Vcl.ActnList, Vcl.RibbonSilverStyleActnCtrls,
+  Vcl.PlatformDefaultStyleActnCtrls, Vcl.RibbonLunaStyleActnCtrls,
+  Vcl.RibbonObsidianStyleActnCtrls, Vcl.Buttons, Vcl.ComCtrls, Vcl.Menus,
+  Vcl.ExtCtrls, frmClienteLoc, frmProdutoLoc, frmLogin, frmCompraCad;
 
 type
   TFrm_Principal = class(TForm)
@@ -23,15 +24,19 @@ type
     pnlInfors: TPanel;
     btnProdutos: TSpeedButton;
     btnFornecedor: TSpeedButton;
+    CadastrosMoviment: TRibbonPage;
+    movimentacoes: TRibbonGroup;
+    btnCompras: TSpeedButton;
     procedure btnClientesClick(Sender: TObject);
     procedure MostrarHint(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btnProdutosClick(Sender: TObject);
     procedure btnFornecedorClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure btnComprasClick(Sender: TObject);
   private
     { Private declarations }
-    FormLogin : TFrm_Loginn;
+    FormLogin: TFrm_Loginn;
   public
     { Public declarations }
   end;
@@ -50,6 +55,12 @@ procedure TFrm_Principal.btnClientesClick(Sender: TObject);
 begin
   Application.CreateForm(TFrm_ClienteLoc, Frm_ClienteLoc);
   Frm_ClienteLoc.Show;
+end;
+
+procedure TFrm_Principal.btnComprasClick(Sender: TObject);
+begin
+  Application.CreateForm(TFrm_CompraCad, Frm_CompraCad);
+  Frm_CompraCad.ShowModal;
 end;
 
 procedure TFrm_Principal.btnFornecedorClick(Sender: TObject);
@@ -76,7 +87,6 @@ begin
   end;
 end;
 
-
 procedure TFrm_Principal.FormShow(Sender: TObject);
 begin
   Application.ShowHint := True;
@@ -92,3 +102,4 @@ begin
 end;
 
 end.
+

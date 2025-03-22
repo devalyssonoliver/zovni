@@ -1,12 +1,12 @@
-unit frmProdutoLoc;
+﻿unit frmProdutoLoc;
 
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls,
-  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids, Vcl.Buttons, dmProdutoLoc,
-  System.ImageList, Vcl.ImgList, frmProdutoCad;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB,
+  Vcl.StdCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids,
+  Vcl.Buttons, dmProdutoLoc, System.ImageList, Vcl.ImgList, frmProdutoCad;
 
 type
   TFrm_ProdutoLoc = class(TForm)
@@ -37,11 +37,10 @@ type
     procedure btnExibirClick(Sender: TObject);
     procedure dbgrdDblClick(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
-
   private
     { Private declarations }
-    FProdutoDM : TDM_ProdutoLoc;
-    FCodigo : Integer;
+    FProdutoDM: TDM_ProdutoLoc;
+    FCodigo: Integer;
     procedure ExibirProdutoCad;
   public
     { Public declarations }
@@ -84,16 +83,14 @@ begin
     1:
       ModoBusca(mdNome);
   end;
-  dbgrd.DataSource := dsProdutoLoc;
-
 end;
 
 procedure TFrm_ProdutoLoc.btnExcluirClick(Sender: TObject);
 begin
-  if Application.MessageBox(PChar('Deseja excluir o produto Id:  ' + dbgrd.DataSource.DataSet.FieldByName('id').AsString + '?'), 'Zovni', MB_YESNO + MB_ICONQUESTION) = IDYES then
-   begin
-
-   end;
+  if Application.MessageBox(PChar('Deseja excluir o produto Id: ' + dbgrd.DataSource.DataSet.FieldByName('id').AsString + '?'), 'ZOvni', MB_YESNO + MB_ICONQUESTION) = IDYES then
+  begin
+    FProdutoDM.Excluir;
+  end;
 end;
 
 procedure TFrm_ProdutoLoc.btnExibirClick(Sender: TObject);
@@ -105,10 +102,10 @@ procedure TFrm_ProdutoLoc.btnNovoClick(Sender: TObject);
 begin
   Application.CreateForm(TFrm_ProdutoCad, Frm_ProdutoCad);
   try
-  Frm_ProdutoCad.AlterarModoOperacao(tpNovo);
-  Frm_ProdutoCad.ShowModal;
+    Frm_ProdutoCad.AlterarModoOperacao(tpNovo);
+    Frm_ProdutoCad.ShowModal;
   finally
-   FreeAndNil(Frm_ProdutoCad);
+    FreeAndNil(Frm_ProdutoCad);
   end;
 end;
 
@@ -119,17 +116,14 @@ end;
 
 procedure TFrm_ProdutoLoc.ConfigurarModoBusca;
 begin
-  begin
-    edtCodigo.Visible := False;
-    edtNome.Visible := False;
+  edtCodigo.Visible := False;
+  edtNome.Visible := False;
 
-    case cbbModoDeBusca.ItemIndex of
-      0:
-        edtCodigo.Visible := True;
-      1:
-        edtNome.Visible := True;
-    end;
-
+  case cbbModoDeBusca.ItemIndex of
+    0:
+      edtCodigo.Visible := True;
+    1:
+      edtNome.Visible := True;
   end;
 end;
 
@@ -141,19 +135,27 @@ end;
 procedure TFrm_ProdutoLoc.FormCreate(Sender: TObject);
 begin
   FProdutoDM := TDM_ProdutoLoc.Create(nil);
-  dbgrd.DataSource := dsProdutoLoc;
   dbgrd.DataSource.DataSet.Active := True;
 end;
 
 procedure TFrm_ProdutoLoc.ModoBusca(Modo: TModoBusca);
 begin
+  if (edtCodigo.Text <> '') or (edtNome.Text <> '') then
+  begin
     case Modo of
-    mdCodigo:
-      FProdutoDM.Buscar(StrToIntDef(edtCodigo.Text, 0), mdCodigo);
-    mdNome:
-      FProdutoDM.Buscar(edtNome.Text, mdNome);
-  end;
+      mdCodigo:
+        FProdutoDM.Buscar(StrToIntDef(edtCodigo.Text, 0), mdCodigo);
+      mdNome:
+        FProdutoDM.Buscar(edtNome.Text, mdNome);
+    end;
+
+    dbgrd.DataSource := dsProdutoLoc;
+    if dsProdutoLoc.DataSet.IsEmpty then
+      Application.MessageBox('Sem resultados para a consulta', 'ZOvni', MB_ICONWARNING);
+  end
+  else
+    Application.MessageBox('O valor da consulta não pode ser nulo!', 'ZOvni', MB_ICONWARNING);
 end;
 
-
 end.
+

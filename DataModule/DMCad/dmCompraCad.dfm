@@ -46,7 +46,10 @@ object DMCompra_Cad: TDMCompra_Cad
     OnNewRecord = fdqryCompraProdNewRecord
     Connection = DM_Gerenciador.fdConnection
     Transaction = fdTransaction
-    UpdateOptions.AssignedValues = [uvEInsert]
+    UpdateOptions.AssignedValues = [uvEDelete, uvEInsert, uvEUpdate]
+    UpdateOptions.EnableDelete = False
+    UpdateOptions.EnableInsert = False
+    UpdateOptions.EnableUpdate = False
     SQL.Strings = (
       'select * from compra_prod'
       '')

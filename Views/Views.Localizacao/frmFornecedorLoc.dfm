@@ -6,7 +6,7 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
   BorderStyle = bsSingle
   Caption = 'Localizar Fornecedor'
   ClientHeight = 521
-  ClientWidth = 921
+  ClientWidth = 938
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,7 +23,7 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
   object pnlBaixo: TPanel
     Left = 0
     Top = 480
-    Width = 921
+    Width = 938
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
@@ -31,7 +31,7 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
     ParentBackground = False
     TabOrder = 2
     StyleName = 'Windows'
-    ExplicitWidth = 908
+    ExplicitWidth = 921
     object btnNovo: TBitBtn
       Left = 8
       Top = 6
@@ -159,7 +159,7 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
       OnClick = btnExcluirClick
     end
     object btnFechar: TBitBtn
-      Left = 834
+      Left = 850
       Top = 6
       Width = 75
       Height = 25
@@ -248,7 +248,7 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
   object pnlMeio: TPanel
     Left = 0
     Top = 41
-    Width = 921
+    Width = 938
     Height = 439
     Align = alClient
     BevelOuter = bvNone
@@ -256,11 +256,11 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
     ParentBackground = False
     TabOrder = 1
     StyleName = 'Windows'
-    ExplicitWidth = 908
+    ExplicitWidth = 921
     object pnlFuncoesBusca: TPanel
       Left = 0
       Top = 0
-      Width = 921
+      Width = 938
       Height = 41
       Align = alTop
       BevelOuter = bvNone
@@ -274,7 +274,7 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
       ParentFont = False
       TabOrder = 0
       StyleName = 'Windows'
-      ExplicitWidth = 908
+      ExplicitWidth = 921
       object cbbModoDeBusca: TComboBox
         Left = 8
         Top = 6
@@ -297,6 +297,7 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
         TabOrder = 2
         TextHint = 'Codigo'
         StyleName = 'Windows11 White Smoke'
+        OnChange = edtCodigoChange
       end
       object edtNome: TEdit
         Left = 159
@@ -307,6 +308,7 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
         TextHint = 'Nome'
         Visible = False
         StyleName = 'Windows11 White Smoke'
+        OnChange = edtNomeChange
       end
       object btnBuscar: TBitBtn
         Left = 286
@@ -404,16 +406,16 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
     object pnlGrid: TPanel
       Left = 0
       Top = 41
-      Width = 921
+      Width = 938
       Height = 398
       Align = alClient
       Caption = 'pnlGrid'
       TabOrder = 1
-      ExplicitWidth = 908
+      ExplicitWidth = 921
       object dbgrd: TDBGrid
         Left = 1
         Top = 1
-        Width = 919
+        Width = 936
         Height = 396
         Align = alClient
         BorderStyle = bsNone
@@ -451,6 +453,7 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
             Title.Font.Height = -12
             Title.Font.Name = 'Segoe UI'
             Title.Font.Style = [fsBold]
+            Width = 640
             Visible = True
           end
           item
@@ -474,6 +477,7 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
             Title.Font.Height = -12
             Title.Font.Name = 'Segoe UI'
             Title.Font.Style = [fsBold]
+            Width = 64
             Visible = True
           end>
       end
@@ -482,7 +486,7 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
   object pnlTopo: TPanel
     Left = 0
     Top = 0
-    Width = 921
+    Width = 938
     Height = 41
     Align = alTop
     BevelOuter = bvNone
@@ -490,7 +494,7 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
-    ExplicitWidth = 908
+    ExplicitWidth = 921
     object imgicon: TImage
       AlignWithMargins = True
       Left = 3

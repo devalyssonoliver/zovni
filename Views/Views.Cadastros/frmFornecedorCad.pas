@@ -133,7 +133,7 @@ end;
 
 procedure TForm_FornecedorCad.btnSalvarClick(Sender: TObject);
 begin
-  if VerificarPreenchimentoObrigatorios([dbedtNome, dbedtTelefone,
+  if VerificarPreenchimentoObrigatorio([dbedtNome, dbedtTelefone,
                                         dbedtEndereco, dbedtNumero])
   then
   Exit;

@@ -123,6 +123,16 @@ end;
 
 procedure TFrm_ProdutoCad.btnSalvarClick(Sender: TObject);
 begin
+  if VerificarPreenchimentoObrigatorio([dbedtNome, dbedtMarca, dbedtPreco,
+  dbedtid_fornecedor, dbedtCusto]) then
+  Exit;
+    if dbedtPreco.Text > dbedtCusto.Text then
+  begin
+    if Application.MessageBox('O preço é menor que o custo, deseja continuar?'
+                            ,'ZOvni', MB_ICONQUESTION) = mrYes then
+                            Exit ;
+  end;
+
   FProdutoCad.Salvar;
   AlterarModoOperacao(tpExibir);
 end;

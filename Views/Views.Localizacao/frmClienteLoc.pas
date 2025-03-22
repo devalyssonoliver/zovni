@@ -1,4 +1,4 @@
-unit frmClienteLoc;
+﻿unit frmClienteLoc;
 
 interface
 
@@ -40,13 +40,10 @@ type
     procedure dbgrdDblClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
   private
-
-    { Private declarations }
     FUsuarioLoc: TDM_ClienteLoc;
-    FCodigo : Integer;
+    FCodigo: Integer;
     procedure ExibirClienteCad;
   public
-    { Public declarations }
   end;
 
 var
@@ -64,20 +61,19 @@ begin
     1:
       ModoBusca(mdNome);
   end;
-  dbgrd.DataSource := dsClienteLoc;
 end;
 
 procedure TFrm_ClienteLoc.btnExcluirClick(Sender: TObject);
 begin
-   if Application.MessageBox(PChar('Deseja excluir o cliente Id:  ' + dbgrd.DataSource.DataSet.FieldByName('id').AsString + '?'), 'Zovni', MB_YESNO + MB_ICONQUESTION) = IDYES then
-   begin
-     FUsuarioLoc.Excluir;
-   end;
+  if Application.MessageBox(PChar('Deseja excluir o cliente Id: ' + dbgrd.DataSource.DataSet.FieldByName('id').AsString + '?'), 'ZOvni', MB_YESNO + MB_ICONQUESTION) = IDYES then
+  begin
+    FUsuarioLoc.Excluir;
+  end;
 end;
 
 procedure TFrm_ClienteLoc.btnExibirClick(Sender: TObject);
 begin
- ExibirClienteCad;
+  ExibirClienteCad;
 end;
 
 procedure TFrm_ClienteLoc.btnNovoClick(Sender: TObject);
@@ -100,17 +96,14 @@ end;
 
 procedure TFrm_ClienteLoc.ConfigurarModoBusca;
 begin
-  begin
-    edtCodigo.Visible := False;
-    edtNome.Visible := False;
+  edtCodigo.Visible := False;
+  edtNome.Visible := False;
 
-    case cbbModoDeBusca.ItemIndex of
-      0:
-        edtCodigo.Visible := True;
-      1:
-        edtNome.Visible := True;
-    end;
-
+  case cbbModoDeBusca.ItemIndex of
+    0:
+      edtCodigo.Visible := True;
+    1:
+      edtNome.Visible := True;
   end;
 end;
 
@@ -162,18 +155,25 @@ end;
 procedure TFrm_ClienteLoc.FormCreate(Sender: TObject);
 begin
   FUsuarioLoc := TDM_ClienteLoc.Create(nil);
-  dbgrd.DataSource := dsClienteLoc;
   dbgrd.DataSource.DataSet.Active := True;
 end;
 
 procedure TFrm_ClienteLoc.ModoBusca(Modo: TModoBusca);
 begin
-  case Modo of
-    mdCodigo:
-      FUsuarioLoc.Buscar(StrToIntDef(edtCodigo.Text, 0), mdCodigo);
-    mdNome:
-      FUsuarioLoc.Buscar(edtNome.Text, mdNome);
-  end;
+  if (edtCodigo.Text <> '') or (edtNome.Text <> '') then
+  begin
+    case Modo of
+      mdCodigo:
+        FUsuarioLoc.Buscar(StrToIntDef(edtCodigo.Text, 0), mdCodigo);
+      mdNome:
+        FUsuarioLoc.Buscar(edtNome.Text, mdNome);
+    end;
+    dbgrd.DataSource := dsClienteLoc;
+    if dsClienteLoc.DataSet.IsEmpty then
+      Application.MessageBox('Sem resultados para a consulta!', 'ZOvni', MB_ICONWARNING);
+  end
+  else
+    Application.MessageBox('O valor da consulta não pode ser nulo!', 'ZOvni', MB_ICONWARNING);
 end;
 
 end.

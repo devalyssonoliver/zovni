@@ -10,6 +10,7 @@ uses
 
 type
   TModoBusca = (mdCodigo, mdNome);
+
   TDM_ClienteLoc = class(TDataModule)
     fdqryClientesLoc: TFDQuery;
     fldClientesLocid: TIntegerField;
@@ -30,8 +31,8 @@ type
     { Private declarations }
   public
     { Public declarations }
-   procedure Buscar(Campo : Variant;Modo: TModoBusca);
-   procedure Excluir;
+    procedure Buscar(Campo: Variant; Modo: TModoBusca);
+    procedure Excluir;
   end;
 
 var
@@ -77,3 +78,4 @@ begin
 end;
 
 end.
+

@@ -10,6 +10,7 @@ uses
 
 type
   TModoBusca = (mdCodigo, mdNome);
+
   TDM_FornecedorLoc = class(TDataModule)
     fdqryFornecedores: TFDQuery;
     wdstrngfldFornecedoresNome: TWideStringField;
@@ -18,7 +19,6 @@ type
     fldFornecedoresID: TIntegerField;
     procedure DataModuleCreate(Sender: TObject);
   private
-
     { Private declarations }
   public
     { Public declarations }
@@ -35,22 +35,22 @@ implementation
 
 {$R *.dfm}
 
-
 procedure TDM_FornecedorLoc.Buscar(Campo: Variant; Modo: TModoBusca);
 begin
   fdqryFornecedores.Close;
-  fdqryFornecedores.SQL.Text := 'SELECT * FROM fornecedores WHERE ';
+  fdqryFornecedores.SQL.Clear;
+  fdqryFornecedores.SQL.Add('SELECT * FROM fornecedores WHERE ');
 
   case Modo of
     mdCodigo:
       begin
-        fdqryFornecedores.SQL.Text := fdqryFornecedores.SQL.Text + 'id = :id';
-        fdqryFornecedores.Params.ParamByName('id').Value := Campo;
+        fdqryFornecedores.SQL.Add('id = :id');
+        fdqryFornecedores.Params.ParamByName('id').AsInteger := Campo;
       end;
     mdNome:
       begin
-        fdqryFornecedores.SQL.Text := fdqryFornecedores.SQL.Text + 'nome ILIKE :nome';
-        fdqryFornecedores.Params.ParamByName('nome').Value := '%' + Campo + '%';
+        fdqryFornecedores.SQL.Add('nome ILIKE :nome');
+        fdqryFornecedores.Params.ParamByName('nome').AsString := '%' + Campo + '%';
       end;
   end;
 
@@ -71,3 +71,4 @@ begin
 end;
 
 end.
+

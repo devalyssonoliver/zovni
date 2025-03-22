@@ -150,13 +150,13 @@ begin
 
   if not fdqryProdutos.IsEmpty then
   begin
-    Nome  := fdqryProdutos.FieldByName('nome').AsString;
+    Nome := fdqryProdutos.FieldByName('nome').AsString;
     Preco := fdqryProdutos.FieldByName('preco').AsCurrency;
     Custo := fdqryProdutos.FieldByName('custo').AsCurrency;
   end
   else
   begin
-    Nome  := '';
+    Nome := '';
     Preco := 0;
     Custo := 0;
   end;
@@ -181,3 +181,4 @@ begin
 end;
 
 end.
+

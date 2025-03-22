@@ -29,8 +29,7 @@ uses
   Winapi.Windows {Form1},
   frmFornecedorCad in '..\Views\Views.Cadastros\frmFornecedorCad.pas' {Form_FornecedorCad},
   dmFornecedorCad in '..\DataModule\DMCad\dmFornecedorCad.pas' {DM_FornecedorCad: TDataModule},
-  frmCompraCad in '..\Views\Views.Cadastros\frmCompraCad.pas' {Frm_CompraCad},
-  dmCompraCad in '..\DataModule\DMCad\dmCompraCad.pas' {DMCompra_Cad: TDataModule};
+  frmCompraCad in '..\Views\Views.Cadastros\frmCompraCad.pas' {Frm_CompraCad};
 
 {$R *.res}
 
