@@ -1,9 +1,0 @@
-object DataModule1: TDataModule1
-  Height = 274
-  Width = 393
-  object fdqryUsuarios: TFDQuery
-    Connection = DM_Gerenciador.fdConnection
-    Left = 240
-    Top = 120
-  end
-end

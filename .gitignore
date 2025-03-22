@@ -1,0 +1,2 @@
+**/__history/
+*.dcu\n*.~*\n*.ddp\n*.cfg\n*.dsk\n*.bak\n*.local\n*.identcache\n*.tvsconfig\n__history/\n*.log\n*.exe\n*.dll\n*.bpl\n*.dcp\n*.drc\n*.res\n*.map\n*.bpg\n*.bpr\n*.tds\n*.dproj.local\n*.dproj.bak
