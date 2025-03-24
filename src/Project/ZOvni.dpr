@@ -39,8 +39,6 @@ begin
   Application.MainFormOnTaskbar := True;
   TStyleManager.TrySetStyle('Windows11 White Smoke');
   Application.CreateForm(TDM_Gerenciador, DM_Gerenciador);
-  Application.CreateForm(TFrm_CompraCad, Frm_CompraCad);
-  Application.CreateForm(TFrm_Compra, Frm_Compra);
   try
     DM_Gerenciador.fdConnection.Connected := True;
     Application.CreateForm(TFrm_Loginn, Frm_Loginn);
