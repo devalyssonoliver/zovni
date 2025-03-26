@@ -30,6 +30,7 @@ object Frm_ClientesCad: TFrm_ClientesCad
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
+    ExplicitWidth = 626
     object lblTITULO: TLabel
       AlignWithMargins = True
       Left = 84
@@ -127,6 +128,8 @@ object Frm_ClientesCad: TFrm_ClientesCad
     ParentBackground = False
     TabOrder = 2
     StyleName = 'Windows'
+    ExplicitTop = 355
+    ExplicitWidth = 626
     object btnSalvar: TBitBtn
       Left = 165
       Top = 6
@@ -352,6 +355,8 @@ object Frm_ClientesCad: TFrm_ClientesCad
     ParentBackground = False
     TabOrder = 1
     StyleName = 'Windows'
+    ExplicitWidth = 626
+    ExplicitHeight = 314
     object pgCad: TPageControl
       Left = 0
       Top = 0
@@ -362,6 +367,8 @@ object Frm_ClientesCad: TFrm_ClientesCad
       Style = tsFlatButtons
       TabOrder = 0
       StyleName = 'Windows11 White Smoke'
+      ExplicitWidth = 626
+      ExplicitHeight = 314
       object tsCadastro: TTabSheet
         Caption = 'Cadastro'
         object grpInfo: TGroupBox

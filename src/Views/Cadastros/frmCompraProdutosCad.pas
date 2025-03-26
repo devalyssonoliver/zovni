@@ -20,7 +20,6 @@ type
     btnEditarCompra: TSpeedButton;
     btnExcluirCompra: TSpeedButton;
     lblCodigo: TLabel;
-    dbgrdProdutosCompra: TDBGrid;
     pnlSeparator1: TPanel;
     pnlCodigoGrid: TPanel;
     lblCodCompra: TLabel;
@@ -37,6 +36,9 @@ type
     btnFechar: TBitBtn;
     btnCancelar: TBitBtn;
     il: TImageList;
+    dbgrd_Produtos_Compra: TDBGrid;
+    pnlAddProdutos: TPanel;
+    edt_CodProduto: TEdit;
     procedure btnNovoClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);

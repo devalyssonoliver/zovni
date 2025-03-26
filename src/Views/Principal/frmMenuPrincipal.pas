@@ -27,6 +27,8 @@ type
     CadastrosMoviment: TRibbonPage;
     movimentacoes: TRibbonGroup;
     btnCompras: TSpeedButton;
+    stat: TStatusBar;
+    spl: TSplitter;
     procedure btnClientesClick(Sender: TObject);
     procedure MostrarHint(Sender: TObject);
     procedure FormShow(Sender: TObject);

@@ -30,6 +30,7 @@ object Form_FornecedorCad: TForm_FornecedorCad
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
+    ExplicitWidth = 633
     object lblTITULO: TLabel
       AlignWithMargins = True
       Left = 71
@@ -218,6 +219,8 @@ object Form_FornecedorCad: TForm_FornecedorCad
     ParentBackground = False
     TabOrder = 2
     StyleName = 'Windows'
+    ExplicitTop = 352
+    ExplicitWidth = 633
     object btnSalvar: TBitBtn
       Left = 165
       Top = 6
@@ -443,6 +446,8 @@ object Form_FornecedorCad: TForm_FornecedorCad
     Style = tsFlatButtons
     TabOrder = 1
     StyleName = 'Windows11 White Smoke'
+    ExplicitWidth = 633
+    ExplicitHeight = 311
     object tsCad: TTabSheet
       Caption = 'Cadastro'
       object grpInfo: TGroupBox

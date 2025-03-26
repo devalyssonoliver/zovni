@@ -3,8 +3,8 @@ object Frm_Compra: TFrm_Compra
   Top = 0
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  ClientHeight = 362
-  ClientWidth = 410
+  ClientHeight = 267
+  ClientWidth = 409
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,7 +16,7 @@ object Frm_Compra: TFrm_Compra
   object pnlTopo: TPanel
     Left = 0
     Top = 0
-    Width = 410
+    Width = 409
     Height = 49
     Align = alTop
     BevelOuter = bvNone
@@ -24,8 +24,7 @@ object Frm_Compra: TFrm_Compra
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
-    ExplicitLeft = -185
-    ExplicitWidth = 676
+    ExplicitWidth = 406
     object lblTITULO: TLabel
       AlignWithMargins = True
       Left = 90
@@ -96,7 +95,7 @@ object Frm_Compra: TFrm_Compra
   object pnlCentral: TPanel
     Left = 0
     Top = 49
-    Width = 410
+    Width = 409
     Height = 296
     Align = alTop
     BevelOuter = bvNone
@@ -105,12 +104,96 @@ object Frm_Compra: TFrm_Compra
     ShowCaption = False
     TabOrder = 1
     StyleName = 'Windows'
-    ExplicitWidth = 454
+    ExplicitWidth = 406
+    object lblFornecedor: TLabel
+      Left = 9
+      Top = 19
+      Width = 63
+      Height = 15
+      Caption = 'Fornecedor:'
+    end
+    object lblFormaPagto: TLabel
+      Left = 9
+      Top = 69
+      Width = 117
+      Height = 15
+      Caption = 'Forma de Pagamento:'
+    end
+    object lblCusto: TLabel
+      Left = 9
+      Top = 116
+      Width = 62
+      Height = 15
+      Caption = 'Custo Total:'
+    end
+    object lblValorTotal: TLabel
+      Left = 269
+      Top = 117
+      Width = 57
+      Height = 15
+      Caption = 'Valor Total:'
+    end
+    object lblDesconto: TLabel
+      Left = 139
+      Top = 116
+      Width = 53
+      Height = 15
+      Caption = 'Desconto:'
+    end
+    object dbedt_Cod_Fornecedor: TDBEdit
+      Left = 9
+      Top = 40
+      Width = 75
+      Height = 23
+      TabOrder = 0
+      StyleName = 'Windows11 White Smoke'
+    end
+    object dbedt_Custo_Total: TDBEdit
+      Left = 9
+      Top = 137
+      Width = 124
+      Height = 23
+      TabOrder = 1
+      StyleName = 'Windows11 White Smoke'
+    end
+    object edt_Nome_Fornecedor: TEdit
+      Left = 90
+      Top = 40
+      Width = 303
+      Height = 23
+      TabOrder = 2
+      Text = 'edt_Nome_Fornecedor'
+      StyleName = 'Windows11 White Smoke'
+    end
+    object dbcbb_FormasPagtos: TDBComboBox
+      Left = 9
+      Top = 88
+      Width = 384
+      Height = 23
+      TabOrder = 3
+      StyleName = 'Windows11 White Smoke'
+    end
+    object dbedt_Valor_Total: TDBEdit
+      Left = 269
+      Top = 138
+      Width = 124
+      Height = 23
+      TabOrder = 4
+      StyleName = 'Windows11 White Smoke'
+    end
+    object dbedt_Desconto: TDBEdit
+      Left = 139
+      Top = 137
+      Width = 124
+      Height = 23
+      TabOrder = 5
+      StyleName = 'Windows11 White Smoke'
+    end
   end
   object pnlBaixo: TPanel
     Left = 0
-    Top = 327
-    Width = 410
+    Top = 232
+    Width = 409
     Height = 35
     Align = alBottom
     BevelOuter = bvNone
@@ -118,9 +201,8 @@ object Frm_Compra: TFrm_Compra
     ParentBackground = False
     TabOrder = 2
     StyleName = 'Windows'
-    ExplicitLeft = -220
-    ExplicitTop = 309
-    ExplicitWidth = 676
+    ExplicitTop = 326
+    ExplicitWidth = 406
     object btnSalvar: TBitBtn
       Left = 9
       Top = 6

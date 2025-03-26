@@ -11,7 +11,6 @@ object DM_Gerenciador: TDM_Gerenciador
       'DriverID=PG')
     TxOptions.AutoStop = False
     ConnectedStoredUsage = [auDesignTime]
-    Connected = True
     Left = 408
     Top = 232
   end

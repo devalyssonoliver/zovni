@@ -3,8 +3,8 @@ object Frm_CompraCad: TFrm_CompraCad
   Top = 0
   BorderIcons = [biSystemMenu]
   Caption = 'Cadastro de Compra'
-  ClientHeight = 427
-  ClientWidth = 676
+  ClientHeight = 430
+  ClientWidth = 670
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,7 +17,7 @@ object Frm_CompraCad: TFrm_CompraCad
   object pnlTopo: TPanel
     Left = 0
     Top = 0
-    Width = 676
+    Width = 670
     Height = 49
     Align = alTop
     BevelOuter = bvNone
@@ -96,7 +96,7 @@ object Frm_CompraCad: TFrm_CompraCad
   object pnlButtons: TPanel
     Left = 0
     Top = 49
-    Width = 676
+    Width = 670
     Height = 48
     Align = alTop
     BevelOuter = bvNone
@@ -104,11 +104,12 @@ object Frm_CompraCad: TFrm_CompraCad
     ParentBackground = False
     TabOrder = 1
     StyleName = 'Windows'
+    ExplicitWidth = 672
     DesignSize = (
-      676
+      670
       48)
     object btnAdicionarCompra: TSpeedButton
-      Left = 515
+      Left = 501
       Top = 6
       Width = 49
       Height = 59
@@ -122,7 +123,7 @@ object Frm_CompraCad: TFrm_CompraCad
       ExplicitLeft = 736
     end
     object btnEditarCompra: TSpeedButton
-      Left = 570
+      Left = 556
       Top = 6
       Width = 49
       Height = 59
@@ -135,7 +136,7 @@ object Frm_CompraCad: TFrm_CompraCad
       ExplicitLeft = 791
     end
     object btnExcluirCompra: TSpeedButton
-      Left = 625
+      Left = 611
       Top = 6
       Width = 49
       Height = 59
@@ -251,50 +252,39 @@ object Frm_CompraCad: TFrm_CompraCad
     object pnlSeparator2: TPanel
       Left = 260
       Top = 0
-      Width = 2
+      Width = 0
       Height = 48
       Align = alLeft
       Color = clBackground
       ParentBackground = False
       ShowCaption = False
       TabOrder = 3
+      ExplicitTop = 6
+      ExplicitHeight = 42
     end
-  end
-  object dbgrdProdutosCompra: TDBGrid
-    Left = 0
-    Top = 97
-    Width = 676
-    Height = 295
-    Align = alClient
-    Anchors = [akTop, akRight]
-    DragMode = dmAutomatic
-    DrawingStyle = gdsGradient
-    TabOrder = 2
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -12
-    TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
-    StyleName = 'Windows11 White Smoke'
   end
   object pnlBaixo: TPanel
     Left = 0
-    Top = 392
-    Width = 676
+    Top = 395
+    Width = 670
     Height = 35
     Align = alBottom
     BevelOuter = bvNone
     Color = clSkyBlue
     ParentBackground = False
-    TabOrder = 3
+    TabOrder = 2
     StyleName = 'Windows'
     ExplicitTop = 391
     ExplicitWidth = 672
+    DesignSize = (
+      670
+      35)
     object btnSalvar: TBitBtn
       Left = 165
       Top = 6
       Width = 75
       Height = 25
+      Anchors = [akRight, akBottom]
       Caption = '&Salvar'
       Glyph.Data = {
         76060000424D7606000000000000360000002800000014000000140000000100
@@ -357,6 +347,7 @@ object Frm_CompraCad: TFrm_CompraCad
       Top = 6
       Width = 75
       Height = 25
+      Anchors = [akRight, akBottom]
       Caption = '&Novo'
       Glyph.Data = {
         76060000424D7606000000000000360000002800000014000000140000000100
@@ -419,6 +410,7 @@ object Frm_CompraCad: TFrm_CompraCad
       Top = 6
       Width = 75
       Height = 25
+      Anchors = [akRight, akBottom]
       Caption = '&Editar'
       Glyph.Data = {
         76060000424D7606000000000000360000002800000014000000140000000100
@@ -481,6 +473,7 @@ object Frm_CompraCad: TFrm_CompraCad
       Top = 6
       Width = 75
       Height = 25
+      Anchors = [akRight, akBottom]
       Caption = '&Fechar'
       Kind = bkClose
       NumGlyphs = 2
@@ -492,10 +485,117 @@ object Frm_CompraCad: TFrm_CompraCad
       Top = 6
       Width = 75
       Height = 25
+      Anchors = [akRight, akBottom]
       Caption = 'Cancelar'
       ImageIndex = 0
       Images = il
       TabOrder = 3
+      StyleName = 'Windows11 White Smoke'
+    end
+  end
+  object dbgrd_Produtos_Compra: TDBGrid
+    Left = 0
+    Top = 97
+    Width = 670
+    Height = 298
+    Align = alClient
+    BorderStyle = bsNone
+    DrawingStyle = gdsGradient
+    TabOrder = 3
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+    StyleName = 'Windows11 White Smoke'
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Title.Caption = 'Id'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -13
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nome'
+        Title.Caption = 'Nome'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -13
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = [fsBold]
+        Width = 353
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'quantidade'
+        Title.Caption = 'Quantidade'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -13
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = [fsBold]
+        Width = 98
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'custo'
+        Title.Caption = 'Custo'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -13
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = [fsBold]
+        Width = 73
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'valor'
+        Title.Caption = 'Valor'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -13
+        Title.Font.Name = 'Segoe UI'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end>
+  end
+  object pnlAddProdutos: TPanel
+    Left = 0
+    Top = 97
+    Width = 670
+    Height = 0
+    Align = alTop
+    BevelOuter = bvNone
+    Caption = 'pnlAddProdutos'
+    Color = clHighlight
+    ParentBackground = False
+    ShowCaption = False
+    TabOrder = 4
+    StyleName = 'Windows'
+    object edt_CodProduto: TEdit
+      Left = 0
+      Top = 0
+      Width = 670
+      Height = 0
+      Align = alLeft
+      Alignment = taCenter
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      Text = 'edt_CodProduto'
       StyleName = 'Windows11 White Smoke'
     end
   end

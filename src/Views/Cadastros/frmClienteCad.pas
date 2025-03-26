@@ -132,6 +132,8 @@ end;
 
 procedure TFrm_ClientesCad.btnSalvarClick(Sender: TObject);
 begin
+  if VerificarPreenchimentoObrigatorio([dbedtNome, dbedtTelefone, dbedtEndereco]) then
+    Exit;
   FClienteCad.Salvar;
   AlterarModoOperacao(tpExibir);
 end;
@@ -160,10 +162,10 @@ end;
 
 procedure TFrm_ClientesCad.dbcbbTipoClick(Sender: TObject);
 begin
-  dbedtCPF.Visible  := False;
+  dbedtCPF.Visible := False;
   dbedtCNPJ.Visible := False;
-  lblCPF.Visible    := False;
-  lblCNPJ.Visible   := False;
+  lblCPF.Visible := False;
+  lblCNPJ.Visible := False;
 
   case dbcbbTipo.ItemIndex of
     0:  // Pessoa Física
