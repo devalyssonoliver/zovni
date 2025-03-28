@@ -1,4 +1,5 @@
 object DM_ProdutoLoc: TDM_ProdutoLoc
+  OnDestroy = DataModuleDestroy
   Height = 480
   Width = 640
   object fdqryProdutoLoc: TFDQuery

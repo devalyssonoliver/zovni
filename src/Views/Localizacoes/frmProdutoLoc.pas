@@ -37,6 +37,7 @@ type
     procedure btnExibirClick(Sender: TObject);
     procedure dbgrdDblClick(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
     FProdutoDM: TDM_ProdutoLoc;
@@ -136,6 +137,11 @@ procedure TFrm_ProdutoLoc.FormCreate(Sender: TObject);
 begin
   FProdutoDM := TDM_ProdutoLoc.Create(nil);
   dbgrd.DataSource.DataSet.Active := True;
+end;
+
+procedure TFrm_ProdutoLoc.FormDestroy(Sender: TObject);
+begin
+  FreeAndNil(FProdutoDM);
 end;
 
 procedure TFrm_ProdutoLoc.ModoBusca(Modo: TModoBusca);

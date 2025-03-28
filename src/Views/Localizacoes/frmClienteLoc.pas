@@ -39,6 +39,7 @@ type
     procedure btnExibirClick(Sender: TObject);
     procedure dbgrdDblClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     FUsuarioLoc: TDM_ClienteLoc;
     FCodigo: Integer;
@@ -156,6 +157,11 @@ procedure TFrm_ClienteLoc.FormCreate(Sender: TObject);
 begin
   FUsuarioLoc := TDM_ClienteLoc.Create(nil);
   dbgrd.DataSource.DataSet.Active := True;
+end;
+
+procedure TFrm_ClienteLoc.FormDestroy(Sender: TObject);
+begin
+  FreeAndNil(FUsuarioLoc);
 end;
 
 procedure TFrm_ClienteLoc.ModoBusca(Modo: TModoBusca);

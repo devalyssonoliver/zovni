@@ -17,6 +17,7 @@ object Frm_ProdutoLoc: TFrm_ProdutoLoc
   ShowHint = True
   StyleName = 'Windows11 White Smoke'
   OnCreate = FormCreate
+  OnDestroy = FormDestroy
   TextHeight = 15
   object pnlBaixo: TPanel
     Left = 0
@@ -29,8 +30,8 @@ object Frm_ProdutoLoc: TFrm_ProdutoLoc
     ParentBackground = False
     TabOrder = 2
     StyleName = 'Windows'
-    ExplicitTop = 509
-    ExplicitWidth = 908
+    ExplicitTop = 507
+    ExplicitWidth = 900
     object btnNovo: TBitBtn
       Left = 8
       Top = 6
@@ -254,12 +255,12 @@ object Frm_ProdutoLoc: TFrm_ProdutoLoc
     ParentBackground = False
     TabOrder = 1
     StyleName = 'Windows'
-    ExplicitWidth = 908
-    ExplicitHeight = 468
+    ExplicitWidth = 900
+    ExplicitHeight = 466
     object pnlFuncoesBusca: TPanel
       Left = 0
       Top = 0
-      Width = 908
+      Width = 904
       Height = 41
       Align = alTop
       BevelOuter = bvNone
@@ -273,6 +274,7 @@ object Frm_ProdutoLoc: TFrm_ProdutoLoc
       ParentFont = False
       TabOrder = 0
       StyleName = 'Windows'
+      ExplicitWidth = 900
       object cbbModoDeBusca: TComboBox
         Left = 8
         Top = 6
@@ -407,13 +409,13 @@ object Frm_ProdutoLoc: TFrm_ProdutoLoc
       Align = alClient
       Caption = 'pnlGrid'
       TabOrder = 1
-      ExplicitWidth = 908
-      ExplicitHeight = 427
+      ExplicitWidth = 900
+      ExplicitHeight = 425
       object dbgrd: TDBGrid
         Left = 1
         Top = 1
-        Width = 906
-        Height = 425
+        Width = 902
+        Height = 424
         Align = alClient
         BorderStyle = bsNone
         DataSource = dsProdutoLoc
@@ -511,7 +513,7 @@ object Frm_ProdutoLoc: TFrm_ProdutoLoc
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
-    ExplicitWidth = 908
+    ExplicitWidth = 900
     object imgicon: TImage
       AlignWithMargins = True
       Left = 3
@@ -552,7 +554,7 @@ object Frm_ProdutoLoc: TFrm_ProdutoLoc
       Left = 79
       Top = 10
       Width = 153
-      Height = 24
+      Height = 28
       Margins.Top = 10
       Align = alLeft
       Alignment = taCenter
@@ -563,6 +565,7 @@ object Frm_ProdutoLoc: TFrm_ProdutoLoc
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
+      ExplicitHeight = 24
     end
   end
   object dsProdutoLoc: TDataSource

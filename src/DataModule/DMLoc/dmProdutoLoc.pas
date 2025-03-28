@@ -19,6 +19,7 @@ type
     wdstrngfldProdutoLocgenero: TWideStringField;
     bcdfldProdutoLocpreco: TBCDField;
     fldProdutoLocestoque: TIntegerField;
+    procedure DataModuleDestroy(Sender: TObject);
   private
     { Private declarations }
   public
@@ -47,17 +48,22 @@ begin
   case Modo of
     mdId:
       begin
-        fdqryProdutoLoc.SQL.Add('id = :id');
+        fdqryProdutoLoc.SQL.Add('AND id = :id');
         fdqryProdutoLoc.Params.ParamByName('id').AsInteger := Campo;
       end;
     mdNome:
       begin
-        fdqryProdutoLoc.SQL.Add('nome ILIKE :nome');
+        fdqryProdutoLoc.SQL.Add('AND nome ILIKE :nome');
         fdqryProdutoLoc.Params.ParamByName('nome').AsString := Campo;
       end;
   end;
 
   fdqryProdutoLoc.Open;
+end;
+
+procedure TDM_ProdutoLoc.DataModuleDestroy(Sender: TObject);
+begin
+  fdqryProdutoLoc.Close;
 end;
 
 procedure TDM_ProdutoLoc.Excluir;

@@ -51,17 +51,17 @@ implementation
 procedure TDM_ClienteLoc.Buscar(Campo: Variant; Modo: TModoBusca);
 begin
   fdqryClientesLoc.Close;
-  fdqryClientesLoc.SQL.Text := 'SELECT * FROM clientes WHERE ';
+  fdqryClientesLoc.SQL.Text := 'SELECT * FROM clientes WHERE 1 = 1 ';
 
   case Modo of
     mdCodigo:
       begin
-        fdqryClientesLoc.SQL.Text := fdqryClientesLoc.SQL.Text + 'id = :id';
+        fdqryClientesLoc.SQL.Add('AND id = :id');
         fdqryClientesLoc.Params.ParamByName('id').Value := Campo;
       end;
     mdNome:
       begin
-        fdqryClientesLoc.SQL.Text := fdqryClientesLoc.SQL.Text + 'nome ILIKE :nome';
+        fdqryClientesLoc.SQL.Add('AND nome = :nome');
         fdqryClientesLoc.Params.ParamByName('nome').Value := '%' + Campo + '%';
       end;
   end;

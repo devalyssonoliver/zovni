@@ -19,6 +19,7 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
   StyleName = 'Windows11 White Smoke'
   OnClose = FormClose
   OnCreate = FormCreate
+  OnDestroy = FormDestroy
   TextHeight = 15
   object pnlBaixo: TPanel
     Left = 0
@@ -31,7 +32,8 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
     ParentBackground = False
     TabOrder = 2
     StyleName = 'Windows'
-    ExplicitWidth = 921
+    ExplicitTop = 479
+    ExplicitWidth = 934
     object btnNovo: TBitBtn
       Left = 8
       Top = 6
@@ -256,7 +258,8 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
     ParentBackground = False
     TabOrder = 1
     StyleName = 'Windows'
-    ExplicitWidth = 921
+    ExplicitWidth = 934
+    ExplicitHeight = 438
     object pnlFuncoesBusca: TPanel
       Left = 0
       Top = 0
@@ -274,7 +277,7 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
       ParentFont = False
       TabOrder = 0
       StyleName = 'Windows'
-      ExplicitWidth = 921
+      ExplicitWidth = 934
       object cbbModoDeBusca: TComboBox
         Left = 8
         Top = 6
@@ -411,7 +414,8 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
       Align = alClient
       Caption = 'pnlGrid'
       TabOrder = 1
-      ExplicitWidth = 921
+      ExplicitWidth = 934
+      ExplicitHeight = 397
       object dbgrd: TDBGrid
         Left = 1
         Top = 1
@@ -477,7 +481,6 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
             Title.Font.Height = -12
             Title.Font.Name = 'Segoe UI'
             Title.Font.Style = [fsBold]
-            Width = 64
             Visible = True
           end>
       end
@@ -494,7 +497,7 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
-    ExplicitWidth = 921
+    ExplicitWidth = 934
     object imgicon: TImage
       AlignWithMargins = True
       Left = 3

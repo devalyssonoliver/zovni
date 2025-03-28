@@ -16,6 +16,7 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
   Position = poDesktopCenter
   StyleName = 'Windows11 White Smoke'
   OnCreate = FormCreate
+  OnDestroy = FormDestroy
   TextHeight = 16
   object pnlTopo: TPanel
     Left = 0
@@ -28,6 +29,7 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
+    ExplicitWidth = 878
     object imgicon: TImage
       Left = 0
       Top = 0
@@ -126,6 +128,8 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
     ParentBackground = False
     TabOrder = 1
     StyleName = 'Windows'
+    ExplicitWidth = 878
+    ExplicitHeight = 448
     object pnlFuncoesBusca: TPanel
       Left = 0
       Top = 0
@@ -143,6 +147,7 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
       ParentFont = False
       TabOrder = 0
       StyleName = 'Windows'
+      ExplicitWidth = 878
       object cbbModoDeBusca: TComboBox
         Left = 8
         Top = 6
@@ -277,6 +282,8 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
       Align = alClient
       Caption = 'pnlGrid'
       TabOrder = 1
+      ExplicitWidth = 878
+      ExplicitHeight = 407
       object dbgrd: TDBGrid
         Left = 1
         Top = 1
@@ -316,7 +323,6 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
             Title.Font.Height = -13
             Title.Font.Name = 'Tahoma'
             Title.Font.Style = [fsBold]
-            Width = 64
             Visible = True
           end
           item
@@ -327,7 +333,6 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
             Title.Font.Height = -13
             Title.Font.Name = 'Tahoma'
             Title.Font.Style = [fsBold]
-            Width = 64
             Visible = True
           end
           item
@@ -338,7 +343,6 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
             Title.Font.Height = -13
             Title.Font.Name = 'Tahoma'
             Title.Font.Style = [fsBold]
-            Width = 64
             Visible = True
           end
           item
@@ -349,7 +353,6 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
             Title.Font.Height = -13
             Title.Font.Name = 'Tahoma'
             Title.Font.Style = [fsBold]
-            Width = 64
             Visible = True
           end
           item
@@ -361,7 +364,6 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
             Title.Font.Height = -13
             Title.Font.Name = 'Tahoma'
             Title.Font.Style = [fsBold]
-            Width = 64
             Visible = True
           end
           item
@@ -372,7 +374,6 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
             Title.Font.Height = -13
             Title.Font.Name = 'Tahoma'
             Title.Font.Style = [fsBold]
-            Width = 64
             Visible = True
           end>
       end
@@ -389,6 +390,8 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
     ParentBackground = False
     TabOrder = 2
     StyleName = 'Windows'
+    ExplicitTop = 489
+    ExplicitWidth = 878
     object btnNovo: TBitBtn
       Left = 8
       Top = 6

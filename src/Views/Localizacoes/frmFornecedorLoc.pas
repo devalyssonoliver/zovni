@@ -39,6 +39,7 @@ type
     procedure dbgrdDblClick(Sender: TObject);
     procedure edtCodigoChange(Sender: TObject);
     procedure edtNomeChange(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
 
   private
     FDMFornecedor: TDM_FornecedorLoc;
@@ -173,6 +174,11 @@ procedure TFrm_FornecedorLoc.FormCreate(Sender: TObject);
 begin
   FDMFornecedor := TDM_FornecedorLoc.Create(nil);
   dsFornecedorLoc.DataSet.Active := True;
+end;
+
+procedure TFrm_FornecedorLoc.FormDestroy(Sender: TObject);
+begin
+  FreeAndNil(FDMFornecedor);
 end;
 
 procedure TFrm_FornecedorLoc.ModoBusca(Modo: TModoBusca);
