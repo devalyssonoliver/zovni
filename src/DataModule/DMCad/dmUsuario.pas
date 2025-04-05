@@ -11,12 +11,12 @@ uses
 type
   TDM_Usuarios = class(TDataModule)
     fdqryUsuarios: TFDQuery;
-    intgrfldUsuarioscodigo: TIntegerField;
     wdstrngfldUsuariosnome: TWideStringField;
     wdstrngfldUsuarioslogin: TWideStringField;
     wdmfldUsuariossenha: TWideMemoField;
     blnfldUsuariosativo: TBooleanField;
     dtfldUsuariosdata_cadastro: TDateField;
+    intgrfldUsuariosid: TIntegerField;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }

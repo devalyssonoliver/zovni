@@ -30,6 +30,7 @@ type
     stat: TStatusBar;
     spl: TSplitter;
     btnUsuarios: TSpeedButton;
+    imgWalpaper: TImage;
     procedure btnClientesClick(Sender: TObject);
     procedure MostrarHint(Sender: TObject);
     procedure FormShow(Sender: TObject);

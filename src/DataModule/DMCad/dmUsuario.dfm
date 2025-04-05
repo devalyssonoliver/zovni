@@ -8,7 +8,7 @@ object DM_Usuarios: TDM_Usuarios
       'SELECT * FROM usuarios')
     Left = 240
     Top = 120
-    object intgrfldUsuarioscodigo: TIntegerField
+    object intgrfldUsuariosid: TIntegerField
       FieldName = 'id'
       Origin = 'id'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]

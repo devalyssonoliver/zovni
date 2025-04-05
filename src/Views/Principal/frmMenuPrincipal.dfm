@@ -35,6 +35,17 @@ object Frm_Principal: TFrm_Principal
     ExplicitTop = 198
     ExplicitHeight = 589
   end
+  object imgWalpaper: TImage
+    Left = 3
+    Top = 169
+    Width = 1341
+    Height = 618
+    Align = alClient
+    ExplicitLeft = 56
+    ExplicitTop = 344
+    ExplicitWidth = 105
+    ExplicitHeight = 105
+  end
   object rbnMenu: TRibbon
     Left = 0
     Top = 0
