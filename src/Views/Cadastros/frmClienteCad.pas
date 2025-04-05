@@ -83,6 +83,8 @@ implementation
 
 {$R *.dfm}
 
+
+// Refatorar, código repetido.
 procedure TFrm_ClientesCad.AlterarModoOperacao(Modo: TModoOperacao);
 begin
   case Modo of

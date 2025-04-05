@@ -30,7 +30,8 @@ uses
   frmFornecedorCad in '..\Views\Cadastros\frmFornecedorCad.pas' {Form_FornecedorCad},
   frmProdutoCad in '..\Views\Cadastros\frmProdutoCad.pas' {Frm_ProdutoCad},
   frmCompraProdutosCad in '..\Views\Cadastros\frmCompraProdutosCad.pas' {Frm_CompraCad},
-  frmCompraCad in '..\Views\Cadastros\frmCompraCad.pas' {Frm_Compra};
+  frmCompraCad in '..\Views\Cadastros\frmCompraCad.pas' {Frm_Compra},
+  frmUsuarioCad in '..\Views\Cadastros\frmUsuarioCad.pas' {Frm_Usuario};
 
 {$R *.res}
 

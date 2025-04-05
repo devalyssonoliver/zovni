@@ -3,8 +3,9 @@ unit frmLogin;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, dmUsuario;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, dmUsuario;
 
 type
   TFrm_Loginn = class(TForm)
@@ -22,7 +23,7 @@ type
 
   private
     { Private declarations }
-    DMLogin :TDM_Usuarios;
+    DMLogin: TDM_Usuarios;
   public
     { Public declarations }
   end;
@@ -36,28 +37,29 @@ implementation
 
 procedure TFrm_Loginn.btnCancelarClick(Sender: TObject);
 begin
- Application.Terminate;
+  Application.Terminate;
 end;
 
 procedure TFrm_Loginn.btnLoginClick(Sender: TObject);
 begin
-   if DMLogin.VerificarLogin(edtLogin.Text, edtSenha.Text) then
-   begin
+  if DMLogin.VerificarLogin(edtLogin.Text, edtSenha.Text) then
+  begin
     Application.MessageBox(PChar('Bem-vindo ' + edtLogin.Text), 'ZOnvio', MB_OK);
     Close;
     ModalResult := mrOk;
-   end
-   else
-   begin
+  end
+  else
+  begin
     Application.MessageBox('Login inválido', 'ZOvni', MB_ICONWARNING);
     ModalResult := mrNone;
-   end;
+  end;
 
 end;
 
 procedure TFrm_Loginn.FormCreate(Sender: TObject);
 begin
-   DMLogin := TDM_Usuarios.Create(self);
+  DMLogin := TDM_Usuarios.Create(self);
 end;
 
 end.
+

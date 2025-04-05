@@ -29,6 +29,7 @@ type
     btnCompras: TSpeedButton;
     stat: TStatusBar;
     spl: TSplitter;
+    btnUsuarios: TSpeedButton;
     procedure btnClientesClick(Sender: TObject);
     procedure MostrarHint(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -36,6 +37,7 @@ type
     procedure btnFornecedorClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnComprasClick(Sender: TObject);
+    procedure btnUsuariosClick(Sender: TObject);
   private
     { Private declarations }
     FormLogin: TFrm_Loginn;
@@ -49,7 +51,7 @@ var
 implementation
 
 uses
-  frmClienteCad, frmFornecedorLoc, frmSplashScreen;
+  frmClienteCad, frmFornecedorLoc, frmSplashScreen, frmUsuarioCad;
 
 {$R *.dfm}
 
@@ -76,6 +78,17 @@ procedure TFrm_Principal.btnProdutosClick(Sender: TObject);
 begin
   Application.CreateForm(TFrm_ProdutoLoc, Frm_ProdutoLoc);
   Frm_ProdutoLoc.Show;
+end;
+
+procedure TFrm_Principal.btnUsuariosClick(Sender: TObject);
+begin
+  Frm_Usuario := TFrm_Usuario.Create(nil);
+  try
+    Frm_Usuario.AlterarModoOperacao(mdExibir);
+    Frm_Usuario.ShowModal;
+  finally
+    FreeAndNil(Frm_Usuario);
+  end;
 end;
 
 procedure TFrm_Principal.FormCreate(Sender: TObject);

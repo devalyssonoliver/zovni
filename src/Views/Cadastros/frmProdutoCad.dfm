@@ -596,7 +596,7 @@
           object dbedtid_fornecedor: TDBEdit
             Left = 463
             Top = 57
-            Width = 154
+            Width = 130
             Height = 22
             Ctl3D = True
             DataField = 'id_fornecedor'

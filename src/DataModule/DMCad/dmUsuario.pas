@@ -11,6 +11,13 @@ uses
 type
   TDM_Usuarios = class(TDataModule)
     fdqryUsuarios: TFDQuery;
+    intgrfldUsuarioscodigo: TIntegerField;
+    wdstrngfldUsuariosnome: TWideStringField;
+    wdstrngfldUsuarioslogin: TWideStringField;
+    wdmfldUsuariossenha: TWideMemoField;
+    blnfldUsuariosativo: TBooleanField;
+    dtfldUsuariosdata_cadastro: TDateField;
+    procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,6 +49,11 @@ begin
 
 end;
 
+procedure TDM_Usuarios.DataModuleCreate(Sender: TObject);
+begin
+ fdqryUsuarios.Open();
+end;
+
 procedure TDM_Usuarios.Editar;
 begin
    fdqryUsuarios.Edit;
@@ -70,7 +82,7 @@ begin
   Result := False;
   fdqryUsuarios.Close;
   fdqryUsuarios.SQL.Text :=
-    'SELECT login FROM usuarios WHERE login = :login AND senha = crypt(:senha, senha)';
+    'SELECT * FROM usuarios WHERE login = :login AND senha = MD5(:senha) AND ativo IS TRUE;';
   fdqryUsuarios.Params.ParamByName('login').AsString := Login;
   fdqryUsuarios.Params.ParamByName('senha').AsString := Senha;
   fdqryUsuarios.Open;

@@ -208,6 +208,10 @@
             <Form>Frm_Compra</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\Views\Cadastros\frmUsuarioCad.pas">
+            <Form>Frm_Usuario</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
