@@ -9,7 +9,8 @@ uses
   System.Actions, Vcl.ActnList, Vcl.RibbonSilverStyleActnCtrls,
   Vcl.PlatformDefaultStyleActnCtrls, Vcl.RibbonLunaStyleActnCtrls,
   Vcl.RibbonObsidianStyleActnCtrls, Vcl.Buttons, Vcl.ComCtrls, Vcl.Menus,
-  Vcl.ExtCtrls, frmClienteLoc, frmProdutoLoc, frmLogin, frmCompraProdutosCad;
+  Vcl.ExtCtrls, frmClienteLoc, frmProdutoLoc, frmLogin, frmCompraProdutosCad,
+  Vcl.Imaging.pngimage;
 
 type
   TFrm_Principal = class(TForm)
@@ -21,7 +22,6 @@ type
     rbgroupinfobasic: TRibbonGroup;
     actClientes: TAction;
     btnClientes: TSpeedButton;
-    pnlInfors: TPanel;
     btnProdutos: TSpeedButton;
     btnFornecedor: TSpeedButton;
     CadastrosMoviment: TRibbonPage;
@@ -31,14 +31,15 @@ type
     spl: TSplitter;
     btnUsuarios: TSpeedButton;
     imgWalpaper: TImage;
+    img_LogoBackground: TImage;
+    img_QRCODE: TImage;
     procedure btnClientesClick(Sender: TObject);
-    procedure MostrarHint(Sender: TObject);
-    procedure FormShow(Sender: TObject);
     procedure btnProdutosClick(Sender: TObject);
     procedure btnFornecedorClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnComprasClick(Sender: TObject);
     procedure btnUsuariosClick(Sender: TObject);
+    procedure FormPaint(Sender: TObject);
   private
     { Private declarations }
     FormLogin: TFrm_Loginn;
@@ -52,7 +53,7 @@ var
 implementation
 
 uses
-  frmClienteCad, frmFornecedorLoc, frmSplashScreen, frmUsuarioCad;
+  frmClienteCad, frmFornecedorLoc, frmSplashScreen, frmUsuarioCad, Vcl.GraphUtil;
 
 {$R *.dfm}
 
@@ -103,18 +104,12 @@ begin
   end;
 end;
 
-procedure TFrm_Principal.FormShow(Sender: TObject);
+procedure TFrm_Principal.FormPaint(Sender: TObject);
 begin
-  Application.ShowHint := True;
-  Application.OnHint := MostrarHint;
-end;
-
-procedure TFrm_Principal.MostrarHint(Sender: TObject);
-begin
-  if Application.Hint <> '' then
-    pnlInfors.Caption := 'Formulário em Exibição: ' + Application.Hint
-  else
-    pnlInfors.Caption := '';
+  GradientFillCanvas(Canvas, RGB(250, 250, 250),  // Cor inicial (branco gelo)
+    RGB(210, 230, 255),  // Cor final (azul bebê)
+    ClientRect,          // Área
+    gdVertical);
 end;
 
 end.
