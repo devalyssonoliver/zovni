@@ -3,8 +3,8 @@ object Frm_Config: TFrm_Config
   Top = 0
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  ClientHeight = 414
-  ClientWidth = 429
+  ClientHeight = 413
+  ClientWidth = 425
   Color = clWhite
   DefaultMonitor = dmDesktop
   Font.Charset = DEFAULT_CHARSET
@@ -20,7 +20,7 @@ object Frm_Config: TFrm_Config
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 429
+    Width = 425
     Height = 57
     Align = alTop
     BevelOuter = bvNone
@@ -28,12 +28,11 @@ object Frm_Config: TFrm_Config
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
-    ExplicitWidth = 425
     object lblTituloDB: TLabel
       AlignWithMargins = True
       Left = 3
       Top = 10
-      Width = 423
+      Width = 376
       Height = 37
       Margins.Top = 10
       Align = alTop
@@ -48,13 +47,12 @@ object Frm_Config: TFrm_Config
       ParentColor = False
       ParentFont = False
       StyleName = 'Windows'
-      ExplicitWidth = 376
     end
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 357
-    Width = 429
+    Top = 356
+    Width = 425
     Height = 57
     Align = alBottom
     BevelOuter = bvNone
@@ -62,8 +60,6 @@ object Frm_Config: TFrm_Config
     ParentBackground = False
     TabOrder = 2
     StyleName = 'Windows'
-    ExplicitTop = 356
-    ExplicitWidth = 425
     object btnSalvar: TBitBtn
       Left = 232
       Top = 16
@@ -143,16 +139,14 @@ object Frm_Config: TFrm_Config
   object pnlCenter: TPanel
     Left = 0
     Top = 57
-    Width = 429
-    Height = 300
+    Width = 425
+    Height = 299
     Align = alClient
     BevelOuter = bvNone
     Color = clWhite
     ParentBackground = False
     TabOrder = 1
     StyleName = 'Windows'
-    ExplicitWidth = 425
-    ExplicitHeight = 299
     object pnlConfig: TPanel
       Left = 0
       Top = 0

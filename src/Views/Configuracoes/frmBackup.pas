@@ -21,6 +21,7 @@ type
     btn_LocalizarCaminho: TBitBtn;
     btn_ExecutarBackup: TBitBtn;
     LOG: TMemo;
+    procedure btn_LocalizarCaminhoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -33,5 +34,10 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrm_Backup.btn_LocalizarCaminhoClick(Sender: TObject);
+begin
+  dlgOpen.Execute;
+end;
 
 end.

@@ -132,7 +132,7 @@
         <DCCReference Include="..\Views\Configuracoes\frmConfiguracaoBanco.pas">
             <Form>Frm_Config</Form>
         </DCCReference>
-        <DCCReference Include="..\Classes\ArquivoConfig.pas"/>
+        <DCCReference Include="..\Classes\zArquivoConfig.pas"/>
         <DCCReference Include="..\Interfaces\IArquivoConfig.pas"/>
         <DCCReference Include="..\DataModule\Gerenciador.pas">
             <Form>DM_Gerenciador</Form>
@@ -222,6 +222,8 @@
             <Form>Frm_Backup</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\Classes\zBackup.pas"/>
+        <DCCReference Include="..\Interfaces\Backup.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

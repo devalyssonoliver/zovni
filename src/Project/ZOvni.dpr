@@ -6,7 +6,7 @@ uses
   frmConfiguracaoBanco in '..\Views\Configuracoes\frmConfiguracaoBanco.pas' {Frm_Config},
   Vcl.Themes,
   Vcl.Styles,
-  ArquivoConfig in '..\Classes\ArquivoConfig.pas',
+  zArquivoConfig in '..\Classes\zArquivoConfig.pas',
   IArquivoConfig in '..\Interfaces\IArquivoConfig.pas',
   Vcl.Dialogs,
   System.SysUtils,
@@ -33,7 +33,9 @@ uses
   frmCompraCad in '..\Views\Cadastros\frmCompraCad.pas' {Frm_Compra},
   frmUsuarioCad in '..\Views\Cadastros\frmUsuarioCad.pas' {Frm_Usuario},
   dmCompraCad in '..\DataModule\DMCad\dmCompraCad.pas' {DataModule1: TDataModule},
-  frmBackup in '..\Views\Configuracoes\frmBackup.pas' {Frm_Backup};
+  frmBackup in '..\Views\Configuracoes\frmBackup.pas' {Frm_Backup},
+  zBackup in '..\Classes\zBackup.pas',
+  Backup in '..\Interfaces\Backup.pas';
 
 {$R *.res}
 

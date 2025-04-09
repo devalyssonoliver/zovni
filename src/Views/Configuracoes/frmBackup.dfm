@@ -299,6 +299,8 @@ object Frm_Backup: TFrm_Backup
     ParentBackground = False
     TabOrder = 1
     StyleName = 'Windows'
+    ExplicitWidth = 642
+    ExplicitHeight = 391
     object pg_Configs: TPageControl
       Left = 0
       Top = 0
@@ -423,6 +425,7 @@ object Frm_Backup: TFrm_Backup
             E8FFFFFAE8F6FFFAE87C00000000FFFFE50AFFF9E2BDFFF9E3F0FFF9E4610000
             00000000000000000000000000000000000000000000}
           TabOrder = 1
+          OnClick = btn_LocalizarCaminhoClick
         end
         object btn_ExecutarBackup: TBitBtn
           Left = 3
