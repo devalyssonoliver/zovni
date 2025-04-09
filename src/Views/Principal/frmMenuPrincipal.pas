@@ -11,7 +11,7 @@ uses
   Vcl.RibbonObsidianStyleActnCtrls, Vcl.Buttons, Vcl.ComCtrls, Vcl.Menus,
   Vcl.ExtCtrls, frmClienteLoc, frmProdutoLoc, frmLogin, frmCompraProdutosCad,
   Vcl.Imaging.pngimage, Vcl.Imaging.jpeg, ShellApi, System.ImageList,
-  Vcl.ImgList;
+  Vcl.ImgList, Vcl.StdCtrls;
 
 type
   TFrm_Principal = class(TForm)
@@ -37,6 +37,8 @@ type
     rbnpgConfiguracoes: TRibbonPage;
     rbngrpmGrupoConfig: TRibbonGroup;
     btn_FormBackup: TSpeedButton;
+    shp_Detalhe_QRCODE: TShape;
+    lbl_QrCode: TLabel;
     procedure btnClientesClick(Sender: TObject);
     procedure btnProdutosClick(Sender: TObject);
     procedure btnFornecedorClick(Sender: TObject);
@@ -45,6 +47,7 @@ type
     procedure btnUsuariosClick(Sender: TObject);
     procedure FormPaint(Sender: TObject);
     procedure img_QRCODEClick(Sender: TObject);
+    procedure btn_FormBackupClick(Sender: TObject);
   private
     { Private declarations }
     FormLogin: TFrm_Loginn;
@@ -58,7 +61,8 @@ var
 implementation
 
 uses
-  frmClienteCad, frmFornecedorLoc, frmSplashScreen, frmUsuarioCad, Vcl.GraphUtil;
+  frmClienteCad, frmFornecedorLoc, frmSplashScreen, frmUsuarioCad, Vcl.GraphUtil,
+  frmBackup;
 
 {$R *.dfm}
 
@@ -95,6 +99,16 @@ begin
     Frm_Usuario.ShowModal;
   finally
     FreeAndNil(Frm_Usuario);
+  end;
+end;
+
+procedure TFrm_Principal.btn_FormBackupClick(Sender: TObject);
+begin
+  Frm_backup := TFrm_Backup.Create(nil);
+  try
+    Frm_Backup.ShowModal;
+  finally
+    FreeAndNil(Frm_Backup);
   end;
 end;
 
