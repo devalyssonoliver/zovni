@@ -31,7 +31,8 @@ uses
   frmProdutoCad in '..\Views\Cadastros\frmProdutoCad.pas' {Frm_ProdutoCad},
   frmCompraProdutosCad in '..\Views\Cadastros\frmCompraProdutosCad.pas' {Frm_CompraCad},
   frmCompraCad in '..\Views\Cadastros\frmCompraCad.pas' {Frm_Compra},
-  frmUsuarioCad in '..\Views\Cadastros\frmUsuarioCad.pas' {Frm_Usuario};
+  frmUsuarioCad in '..\Views\Cadastros\frmUsuarioCad.pas' {Frm_Usuario},
+  dmCompraCad in '..\DataModule\DMCad\dmCompraCad.pas' {DataModule1: TDataModule};
 
 {$R *.res}
 
@@ -40,6 +41,7 @@ begin
   Application.MainFormOnTaskbar := True;
   TStyleManager.TrySetStyle('Windows11 White Smoke');
   Application.CreateForm(TDM_Gerenciador, DM_Gerenciador);
+  Application.CreateForm(TDataModule1, DataModule1);
   try
     DM_Gerenciador.fdConnection.Connected := True;
     Application.CreateForm(TFrm_Loginn, Frm_Loginn);

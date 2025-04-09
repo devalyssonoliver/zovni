@@ -10,7 +10,7 @@ uses
   Vcl.PlatformDefaultStyleActnCtrls, Vcl.RibbonLunaStyleActnCtrls,
   Vcl.RibbonObsidianStyleActnCtrls, Vcl.Buttons, Vcl.ComCtrls, Vcl.Menus,
   Vcl.ExtCtrls, frmClienteLoc, frmProdutoLoc, frmLogin, frmCompraProdutosCad,
-  Vcl.Imaging.pngimage;
+  Vcl.Imaging.pngimage, Vcl.Imaging.jpeg, ShellApi;
 
 type
   TFrm_Principal = class(TForm)
@@ -40,6 +40,7 @@ type
     procedure btnComprasClick(Sender: TObject);
     procedure btnUsuariosClick(Sender: TObject);
     procedure FormPaint(Sender: TObject);
+    procedure img_QRCODEClick(Sender: TObject);
   private
     { Private declarations }
     FormLogin: TFrm_Loginn;
@@ -110,6 +111,11 @@ begin
     RGB(210, 230, 255),  // Cor final (azul bebê)
     ClientRect,          // Área
     gdVertical);
+end;
+
+procedure TFrm_Principal.img_QRCODEClick(Sender: TObject);
+begin
+  ShellExecute(0, 'open', 'https://github.com/devalyssonoliver/zovni', nil, nil, SHOW_OPENWINDOW);
 end;
 
 end.

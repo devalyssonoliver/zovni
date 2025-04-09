@@ -3,14 +3,15 @@ unit frmProdutoCad;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons,
-  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls, Vcl.DBCtrls, Data.DB,
-  Vcl.Mask, Vcl.Grids, Vcl.DBGrids, dmProdutoCad, UFuncoesAuxiliares,
-  System.ImageList, Vcl.ImgList;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  Vcl.StdCtrls, Vcl.Buttons, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls,
+  Vcl.DBCtrls, Data.DB, Vcl.Mask, Vcl.Grids, Vcl.DBGrids, dmProdutoCad,
+  UFuncoesAuxiliares, System.ImageList, Vcl.ImgList;
 
 type
   TModoOperacao = (tpNovo, tpEditar, tpExibir);
+
   TFrm_ProdutoCad = class(TForm)
     pnlTopo: TPanel;
     lblTITULO: TLabel;
@@ -23,7 +24,6 @@ type
     pnlMeio: TPanel;
     pgcModulos: TPageControl;
     tsCadastroProd: TTabSheet;
-    tsMovimentações: TTabSheet;
     grpInforBasic: TGroupBox;
     dbedtId: TDBEdit;
     dsProdutoCad: TDataSource;
@@ -59,11 +59,11 @@ type
     procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
-    FProdutoCad : TDM_ProdutoCad;
+    FProdutoCad: TDM_ProdutoCad;
   public
     { Public declarations }
-  procedure AlterarModoOperacao(Modo: TModoOperacao);
-  procedure CarregarCliente(_Codigo : Integer);
+    procedure AlterarModoOperacao(Modo: TModoOperacao);
+    procedure CarregarCliente(_Codigo: Integer);
   end;
 
 var
@@ -84,7 +84,7 @@ begin
       begin
         if Modo = tpNovo then
         begin
-          FProdutoCad.Inserir ;
+          FProdutoCad.Inserir;
         end
         else
         begin
@@ -118,19 +118,17 @@ end;
 
 procedure TFrm_ProdutoCad.btnNovoClick(Sender: TObject);
 begin
-   AlterarModoOperacao(tpNovo);
+  AlterarModoOperacao(tpNovo);
 end;
 
 procedure TFrm_ProdutoCad.btnSalvarClick(Sender: TObject);
 begin
-  if VerificarPreenchimentoObrigatorio([dbedtNome, dbedtMarca, dbedtPreco,
-  dbedtid_fornecedor, dbedtCusto]) then
-  Exit;
-    if dbedtPreco.Text > dbedtCusto.Text then
+  if VerificarPreenchimentoObrigatorio([dbedtNome, dbedtMarca, dbedtPreco, dbedtid_fornecedor, dbedtCusto]) then
+    Exit;
+  if dbedtCusto.Text > dbedtPreco.Text then
   begin
-    if Application.MessageBox('O preço é menor que o custo, deseja continuar?'
-                            ,'ZOvni', MB_ICONQUESTION) = mrYes then
-                            Exit ;
+    if Application.MessageBox('O preço é menor que o custo, deseja continuar?', 'ZOvni', MB_ICONQUESTION) = mrYes then
+      Exit;
   end;
 
   FProdutoCad.Salvar;
@@ -139,7 +137,7 @@ end;
 
 procedure TFrm_ProdutoCad.CarregarCliente(_Codigo: Integer);
 begin
-   FProdutoCad.ExibirProduto(_Codigo);
+  FProdutoCad.ExibirProduto(_Codigo);
 end;
 
 procedure TFrm_ProdutoCad.FormCreate(Sender: TObject);
@@ -154,3 +152,4 @@ begin
 end;
 
 end.
+

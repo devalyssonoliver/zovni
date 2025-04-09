@@ -7,6 +7,7 @@ object DM_Gerenciador: TDM_Gerenciador
       'Database=base_zovni'
       'User_Name=postgres'
       'Password=postzeus2011'
+      'Port=5433'
       'DriverID=PG')
     TxOptions.AutoStop = False
     ConnectedStoredUsage = [auDesignTime]
@@ -15,7 +16,7 @@ object DM_Gerenciador: TDM_Gerenciador
     Top = 232
   end
   object pgDriver: TFDPhysPgDriverLink
-    VendorLib = 'C:\Zeus\8.0.0 - 32bits\libpq.dll'
+    VendorLib = 'C:\Users\ally\Downloads\libpq.dll'
     Left = 312
     Top = 224
   end

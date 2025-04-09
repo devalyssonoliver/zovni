@@ -69,6 +69,9 @@ object DM_ProdutoCad: TDM_ProdutoCad
     end
   end
   object fdqryNumeracaoProd: TFDQuery
+    Active = True
+    BeforePost = fdqryNumeracaoProdBeforePost
+    AfterPost = fdqryNumeracaoProdAfterPost
     Connection = DM_Gerenciador.fdConnection
     SQL.Strings = (
       'select * from produto_numeracao')
@@ -104,6 +107,7 @@ object DM_ProdutoCad: TDM_ProdutoCad
     end
   end
   object fdqryNumeracao: TFDQuery
+    Active = True
     AutoCalcFields = False
     Connection = DM_Gerenciador.fdConnection
     SQL.Strings = (

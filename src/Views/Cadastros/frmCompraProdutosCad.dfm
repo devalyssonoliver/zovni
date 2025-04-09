@@ -25,7 +25,6 @@ object Frm_CompraCad: TFrm_CompraCad
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
-    ExplicitWidth = 672
     object lblTITULO: TLabel
       AlignWithMargins = True
       Left = 90
@@ -104,50 +103,6 @@ object Frm_CompraCad: TFrm_CompraCad
     ParentBackground = False
     TabOrder = 1
     StyleName = 'Windows'
-    ExplicitWidth = 672
-    DesignSize = (
-      670
-      48)
-    object btnAdicionarCompra: TSpeedButton
-      Left = 501
-      Top = 6
-      Width = 49
-      Height = 59
-      Anchors = [akTop, akRight]
-      Caption = '&Nova'
-      ImageIndex = 2
-      Images = imgListButtons
-      Layout = blGlyphTop
-      StyleName = 'Windows11 White Smoke'
-      OnClick = btnAdicionarCompraClick
-      ExplicitLeft = 736
-    end
-    object btnEditarCompra: TSpeedButton
-      Left = 556
-      Top = 6
-      Width = 49
-      Height = 59
-      Anchors = [akTop, akRight]
-      Caption = '&Editar'
-      ImageIndex = 1
-      Images = imgListButtons
-      Layout = blGlyphTop
-      StyleName = 'Windows11 White Smoke'
-      ExplicitLeft = 791
-    end
-    object btnExcluirCompra: TSpeedButton
-      Left = 611
-      Top = 6
-      Width = 49
-      Height = 59
-      Anchors = [akTop, akRight]
-      Caption = 'Exclui&r'
-      ImageIndex = 0
-      Images = imgListButtons
-      Layout = blGlyphTop
-      StyleName = 'Windows11 White Smoke'
-      ExplicitLeft = 846
-    end
     object lblCodigo: TLabel
       Left = 580
       Top = 21
@@ -169,7 +124,7 @@ object Frm_CompraCad: TFrm_CompraCad
       BevelOuter = bvNone
       Color = clWhite
       ParentBackground = False
-      TabOrder = 1
+      TabOrder = 0
       object lblCodCompra: TLabel
         Left = 0
         Top = 0
@@ -208,7 +163,7 @@ object Frm_CompraCad: TFrm_CompraCad
       Color = clBackground
       ParentBackground = False
       ShowCaption = False
-      TabOrder = 0
+      TabOrder = 1
     end
     object pnlFornecedorGrid: TPanel
       Left = 107
@@ -259,8 +214,6 @@ object Frm_CompraCad: TFrm_CompraCad
       ParentBackground = False
       ShowCaption = False
       TabOrder = 3
-      ExplicitTop = 6
-      ExplicitHeight = 42
     end
   end
   object pnlBaixo: TPanel
@@ -272,10 +225,8 @@ object Frm_CompraCad: TFrm_CompraCad
     BevelOuter = bvNone
     Color = clSkyBlue
     ParentBackground = False
-    TabOrder = 2
+    TabOrder = 4
     StyleName = 'Windows'
-    ExplicitTop = 391
-    ExplicitWidth = 672
     DesignSize = (
       670
       35)
@@ -579,7 +530,7 @@ object Frm_CompraCad: TFrm_CompraCad
     Color = clHighlight
     ParentBackground = False
     ShowCaption = False
-    TabOrder = 4
+    TabOrder = 2
     StyleName = 'Windows'
     object edt_CodProduto: TEdit
       Left = 0
@@ -597,6 +548,7 @@ object Frm_CompraCad: TFrm_CompraCad
       TabOrder = 0
       Text = 'edt_CodProduto'
       StyleName = 'Windows11 White Smoke'
+      ExplicitHeight = 33
     end
   end
   object imgListButtons: TImageList

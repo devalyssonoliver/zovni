@@ -16,9 +16,6 @@ type
     lblTITULO: TLabel;
     imgicon: TImage;
     pnlButtons: TPanel;
-    btnAdicionarCompra: TSpeedButton;
-    btnEditarCompra: TSpeedButton;
-    btnExcluirCompra: TSpeedButton;
     lblCodigo: TLabel;
     pnlSeparator1: TPanel;
     pnlCodigoGrid: TPanel;

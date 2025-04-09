@@ -10,8 +10,8 @@ uses
 
 type
   TDM_ProdutoCad = class(TDataModule)
-    fdqryNumeracaoProd : TFDQuery;
-    fdqryNumeracao : TFDQuery;
+    fdqryNumeracaoProd: TFDQuery;
+    fdqryNumeracao: TFDQuery;
     fdqryProdutoCad: TFDQuery;
     fldProdutoCadid: TIntegerField;
     wdstrngfldProdutoCadnome: TWideStringField;
@@ -25,6 +25,8 @@ type
     bcdfldProdutoCadcusto: TBCDField;
     fldProdutoCadid_fornecedor: TIntegerField;
     procedure DataModuleCreate(Sender: TObject);
+    procedure fdqryNumeracaoProdBeforePost(DataSet: TDataSet);
+    procedure fdqryNumeracaoProdAfterPost(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -62,6 +64,8 @@ end;
 procedure TDM_ProdutoCad.Editar;
 begin
   fdqryProdutoCad.Edit;
+  fdqryNumeracaoProd.Open();
+  fdqryNumeracaoProd.Insert;
 end;
 
 procedure TDM_ProdutoCad.Excluir;
@@ -93,6 +97,24 @@ begin
   end;
 end;
 
+procedure TDM_ProdutoCad.fdqryNumeracaoProdAfterPost(DataSet: TDataSet);
+begin
+  if not fdqryProdutoCad.FieldByName('id').IsNull then
+  begin
+    fdqryNumeracaoProd.Close;
+    fdqryNumeracaoProd.ParamByName('id_produto').AsInteger := fdqryProdutoCad.FieldByName('id').AsInteger;
+    fdqryNumeracaoProd.Open;
+  end;
+end;
+
+procedure TDM_ProdutoCad.fdqryNumeracaoProdBeforePost(DataSet: TDataSet);
+begin
+  if fdqryNumeracaoProd.FieldByName('id_produto').IsNull then
+  begin
+    fdqryNumeracaoProd.FieldByName('id_produto').AsInteger := fdqryProdutoCad.FieldByName('id').AsInteger;
+  end;
+end;
+
 procedure TDM_ProdutoCad.Inserir;
 begin
   if not (fdqryProdutoCad.State in [dsInsert, dsEdit]) then
@@ -117,3 +139,4 @@ begin
 end;
 
 end.
+

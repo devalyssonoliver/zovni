@@ -5,7 +5,7 @@
   BorderStyle = bsSingle
   Caption = 'Cadastro de Produto'
   ClientHeight = 351
-  ClientWidth = 640
+  ClientWidth = 678
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,7 +20,7 @@
   object pnlTopo: TPanel
     Left = 0
     Top = 0
-    Width = 640
+    Width = 678
     Height = 41
     Align = alTop
     BevelOuter = bvNone
@@ -28,7 +28,7 @@
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
-    ExplicitWidth = 636
+    ExplicitWidth = 640
     object lblTITULO: TLabel
       AlignWithMargins = True
       Left = 71
@@ -86,7 +86,7 @@
   object pnlBaixo: TPanel
     Left = 0
     Top = 316
-    Width = 640
+    Width = 678
     Height = 35
     Align = alBottom
     BevelOuter = bvNone
@@ -94,8 +94,7 @@
     ParentBackground = False
     TabOrder = 2
     StyleName = 'Windows'
-    ExplicitTop = 315
-    ExplicitWidth = 636
+    ExplicitWidth = 640
     object btnSalvar: TBitBtn
       Left = 165
       Top = 6
@@ -286,7 +285,7 @@
       OnClick = btnEditarClick
     end
     object btnFechar: TBitBtn
-      Left = 558
+      Left = 596
       Top = 6
       Width = 75
       Height = 25
@@ -312,7 +311,7 @@
   object pnlMeio: TPanel
     Left = 0
     Top = 41
-    Width = 640
+    Width = 678
     Height = 275
     Align = alClient
     BevelOuter = bvNone
@@ -320,26 +319,24 @@
     ParentBackground = False
     TabOrder = 1
     StyleName = 'Windows'
-    ExplicitWidth = 636
-    ExplicitHeight = 274
+    ExplicitWidth = 640
     object pgcModulos: TPageControl
       Left = 0
       Top = 0
-      Width = 640
+      Width = 678
       Height = 275
       ActivePage = tsCadastroProd
       Align = alClient
       TabOrder = 0
       StyleName = 'Windows11 White Smoke'
-      ExplicitWidth = 636
-      ExplicitHeight = 274
+      ExplicitWidth = 640
       object tsCadastroProd: TTabSheet
         Caption = 'Cadastro'
         object grpInforBasic: TGroupBox
           AlignWithMargins = True
           Left = 3
           Top = 3
-          Width = 626
+          Width = 664
           Height = 380
           ParentCustomHint = False
           Align = alTop
@@ -363,7 +360,7 @@
           ShowHint = False
           TabOrder = 0
           StyleName = 'Windows11 White Smoke'
-          ExplicitWidth = 622
+          ExplicitWidth = 626
           object lblNome: TLabel
             Left = 3
             Top = 39
@@ -500,7 +497,7 @@
           object dbedtDataCadastro: TDBEdit
             Left = 463
             Top = 105
-            Width = 154
+            Width = 188
             Height = 22
             Ctl3D = True
             DataField = 'data_cadastro'
@@ -555,14 +552,13 @@
           object dbgrdNumeracao: TDBGrid
             Left = 463
             Top = 153
-            Width = 154
+            Width = 188
             Height = 84
-            Ctl3D = True
+            Ctl3D = False
             DataSource = dsEstoque
             DrawingStyle = gdsGradient
-            Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick, dgTitleHotTrack]
             ParentCtl3D = False
-            ReadOnly = True
             TabOrder = 10
             TitleFont.Charset = DEFAULT_CHARSET
             TitleFont.Color = clWindowText
@@ -596,7 +592,7 @@
           object dbedtid_fornecedor: TDBEdit
             Left = 463
             Top = 57
-            Width = 130
+            Width = 188
             Height = 22
             Ctl3D = True
             DataField = 'id_fornecedor'
@@ -621,16 +617,16 @@
   object dsEstoque: TDataSource
     AutoEdit = False
     DataSet = DM_ProdutoCad.fdqryNumeracaoProd
-    Left = 488
-    Top = 224
+    Left = 288
+    Top = 176
   end
   object il: TImageList
     ColorDepth = cd32Bit
     DrawingStyle = dsTransparent
     Height = 20
     Width = 20
-    Left = 572
-    Top = 203
+    Left = 220
+    Top = 51
     Bitmap = {
       494C010101001C00040014001400FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000500000001400000001002000000000000019
