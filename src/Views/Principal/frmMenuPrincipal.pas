@@ -10,7 +10,8 @@ uses
   Vcl.PlatformDefaultStyleActnCtrls, Vcl.RibbonLunaStyleActnCtrls,
   Vcl.RibbonObsidianStyleActnCtrls, Vcl.Buttons, Vcl.ComCtrls, Vcl.Menus,
   Vcl.ExtCtrls, frmClienteLoc, frmProdutoLoc, frmLogin, frmCompraProdutosCad,
-  Vcl.Imaging.pngimage, Vcl.Imaging.jpeg, ShellApi;
+  Vcl.Imaging.pngimage, Vcl.Imaging.jpeg, ShellApi, System.ImageList,
+  Vcl.ImgList;
 
 type
   TFrm_Principal = class(TForm)
@@ -33,6 +34,9 @@ type
     imgWalpaper: TImage;
     img_LogoBackground: TImage;
     img_QRCODE: TImage;
+    rbnpgConfiguracoes: TRibbonPage;
+    rbngrpmGrupoConfig: TRibbonGroup;
+    btn_FormBackup: TSpeedButton;
     procedure btnClientesClick(Sender: TObject);
     procedure btnProdutosClick(Sender: TObject);
     procedure btnFornecedorClick(Sender: TObject);

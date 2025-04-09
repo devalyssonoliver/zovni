@@ -39,17 +39,17 @@ procedure TDM_FornecedorLoc.Buscar(Campo: Variant; Modo: TModoBusca);
 begin
   fdqryFornecedores.Close;
   fdqryFornecedores.SQL.Clear;
-  fdqryFornecedores.SQL.Add('SELECT * FROM fornecedores WHERE 1 = 1');
+  fdqryFornecedores.SQL.Add('SELECT * FROM fornecedores WHERE');
 
   case Modo of
     mdCodigo:
       begin
-        fdqryFornecedores.SQL.Add(' AND id = :id');
+        fdqryFornecedores.SQL.Add('id = :id');
         fdqryFornecedores.Params.ParamByName('id').AsInteger := Campo;
       end;
     mdNome:
       begin
-        fdqryFornecedores.SQL.Add('AND nome ILIKE :nome');
+        fdqryFornecedores.SQL.Add('nome ILIKE :nome');
         fdqryFornecedores.Params.ParamByName('nome').AsString := '%' + Campo + '%';
       end;
   end;
