@@ -24,16 +24,6 @@ object Frm_Principal: TFrm_Principal
     1344
     809)
   TextHeight = 16
-  object shp_Detalhe_QRCODE: TShape
-    Left = 1104
-    Top = 544
-    Width = 232
-    Height = 225
-    Anchors = [akRight, akBottom]
-    Brush.Color = clHighlight
-    Pen.Style = psInsideFrame
-    Shape = stRoundSquare
-  end
   object btnGithub: TSpeedButton
     Left = 1184
     Top = -24

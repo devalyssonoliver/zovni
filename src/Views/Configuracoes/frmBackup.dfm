@@ -3,8 +3,8 @@ object Frm_Backup: TFrm_Backup
   Top = 0
   BorderIcons = [biSystemMenu]
   Caption = 'Formul'#225'rio Backup'
-  ClientHeight = 433
-  ClientWidth = 646
+  ClientHeight = 253
+  ClientWidth = 645
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,7 +17,7 @@ object Frm_Backup: TFrm_Backup
   object pnlTopo: TPanel
     Left = 0
     Top = 0
-    Width = 646
+    Width = 645
     Height = 41
     Align = alTop
     BevelOuter = bvNone
@@ -291,8 +291,8 @@ object Frm_Backup: TFrm_Backup
   object pnl_Central: TPanel
     Left = 0
     Top = 41
-    Width = 646
-    Height = 392
+    Width = 645
+    Height = 212
     Align = alClient
     BevelOuter = bvNone
     Color = clSkyBlue
@@ -304,14 +304,12 @@ object Frm_Backup: TFrm_Backup
     object pg_Configs: TPageControl
       Left = 0
       Top = 0
-      Width = 646
-      Height = 392
+      Width = 645
+      Height = 212
       ActivePage = tsNow
       Align = alClient
       TabOrder = 0
       StyleName = 'Windows11 White Smoke'
-      ExplicitWidth = 642
-      ExplicitHeight = 391
       object tsNow: TTabSheet
         Caption = 'Executar'
         object lbledt_DiretorioBackup: TLabeledEdit
@@ -431,48 +429,26 @@ object Frm_Backup: TFrm_Backup
           Left = 3
           Top = 98
           Width = 632
-          Height = 33
-          Cancel = True
-          Caption = '&Executar'
-          Default = True
+          Height = 34
+          Caption = 'Executar'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -19
           Font.Name = 'Segoe UI'
           Font.Style = []
-          ModalResult = 6
-          NumGlyphs = 2
           ParentFont = False
           TabOrder = 2
+          OnClick = btn_ExecutarBackupClick
         end
-        object LOG: TMemo
-          Left = 3
-          Top = 144
-          Width = 632
-          Height = 215
-          BevelEdges = []
-          BevelInner = bvNone
-          BevelOuter = bvNone
-          BorderStyle = bsNone
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ImeName = 'Portuguese (Brazilian ABNT)'
-          Lines.Strings = (
-            'LOG')
-          ParentFont = False
-          ParentShowHint = False
-          ReadOnly = True
-          ShowHint = False
+        object pb_Progresso: TProgressBar
+          Left = 0
+          Top = 165
+          Width = 637
+          Height = 17
+          Align = alBottom
           TabOrder = 3
           StyleName = 'Windows11 White Smoke'
         end
-      end
-      object tsAgendar: TTabSheet
-        Caption = 'Agendamento'
-        ImageIndex = 1
       end
     end
   end

@@ -37,7 +37,6 @@ type
     rbnpgConfiguracoes: TRibbonPage;
     rbngrpmGrupoConfig: TRibbonGroup;
     btn_FormBackup: TSpeedButton;
-    shp_Detalhe_QRCODE: TShape;
     lbl_QrCode: TLabel;
     procedure btnClientesClick(Sender: TObject);
     procedure btnProdutosClick(Sender: TObject);

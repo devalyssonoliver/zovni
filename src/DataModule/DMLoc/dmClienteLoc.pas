@@ -61,7 +61,7 @@ begin
       end;
     mdNome:
       begin
-        fdqryClientesLoc.SQL.Add('nome = :nome');
+        fdqryClientesLoc.SQL.Add('nome ILIKE :nome');
         fdqryClientesLoc.Params.ParamByName('nome').Value := '%' + Campo + '%';
       end;
   end;

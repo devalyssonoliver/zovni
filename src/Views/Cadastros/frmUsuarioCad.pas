@@ -23,7 +23,6 @@ type
     lbl_Nome: TLabel;
     lbl_Login: TLabel;
     lbl_Senha: TLabel;
-    dbedt_DataCadastro: TDBEdit;
     lbl_DataCadastro: TLabel;
     ds_UsuarioscCad: TDataSource;
     dbedt_Codigo: TDBEdit;
@@ -33,6 +32,7 @@ type
     btnEditar: TBitBtn;
     btnFechar: TBitBtn;
     btnCancelar: TBitBtn;
+    dbedt_DataCadastro: TDBEdit;
     dbedt_Senha: TDBEdit;
     procedure btnSalvarClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);

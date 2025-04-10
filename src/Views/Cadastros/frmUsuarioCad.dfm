@@ -40,7 +40,8 @@ object Frm_Usuario: TFrm_Usuario
     ShowCaption = False
     TabOrder = 1
     StyleName = 'Windows'
-    ExplicitHeight = 248
+    ExplicitWidth = 407
+    ExplicitHeight = 251
     object lbl_Nome: TLabel
       Left = 4
       Top = 43
@@ -244,7 +245,7 @@ object Frm_Usuario: TFrm_Usuario
     ParentBackground = False
     TabOrder = 3
     StyleName = 'Windows'
-    ExplicitTop = 251
+    ExplicitTop = 324
     ExplicitWidth = 407
     object btnSalvar: TBitBtn
       Left = 165
