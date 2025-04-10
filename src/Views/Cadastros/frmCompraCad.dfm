@@ -3,8 +3,8 @@ object Frm_Compra: TFrm_Compra
   Top = 0
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  ClientHeight = 267
-  ClientWidth = 409
+  ClientHeight = 266
+  ClientWidth = 405
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,7 +16,7 @@ object Frm_Compra: TFrm_Compra
   object pnlTopo: TPanel
     Left = 0
     Top = 0
-    Width = 409
+    Width = 405
     Height = 49
     Align = alTop
     BevelOuter = bvNone
@@ -24,7 +24,6 @@ object Frm_Compra: TFrm_Compra
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
-    ExplicitWidth = 406
     object lblTITULO: TLabel
       AlignWithMargins = True
       Left = 90
@@ -95,7 +94,7 @@ object Frm_Compra: TFrm_Compra
   object pnlCentral: TPanel
     Left = 0
     Top = 49
-    Width = 409
+    Width = 405
     Height = 296
     Align = alTop
     BevelOuter = bvNone
@@ -104,7 +103,6 @@ object Frm_Compra: TFrm_Compra
     ShowCaption = False
     TabOrder = 1
     StyleName = 'Windows'
-    ExplicitWidth = 406
     object lblFornecedor: TLabel
       Left = 9
       Top = 19
@@ -192,8 +190,8 @@ object Frm_Compra: TFrm_Compra
   end
   object pnlBaixo: TPanel
     Left = 0
-    Top = 232
-    Width = 409
+    Top = 231
+    Width = 405
     Height = 35
     Align = alBottom
     BevelOuter = bvNone
@@ -201,8 +199,6 @@ object Frm_Compra: TFrm_Compra
     ParentBackground = False
     TabOrder = 2
     StyleName = 'Windows'
-    ExplicitTop = 326
-    ExplicitWidth = 406
     object btnSalvar: TBitBtn
       Left = 9
       Top = 6

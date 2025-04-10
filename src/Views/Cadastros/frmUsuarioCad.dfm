@@ -3,8 +3,8 @@ object Frm_Usuario: TFrm_Usuario
   Top = 0
   Hint = 'Cadastro de Usu'#225'rio'
   Caption = 'Cadastro de Usu'#225'rio'
-  ClientHeight = 360
-  ClientWidth = 411
+  ClientHeight = 359
+  ClientWidth = 407
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,19 +19,19 @@ object Frm_Usuario: TFrm_Usuario
   object dbnvr_Controller: TDBNavigator
     Left = 0
     Top = 41
-    Width = 411
+    Width = 407
     Height = 32
     DataSource = ds_UsuarioscCad
     VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 407
+    ExplicitWidth = 403
   end
   object pnlCentral: TPanel
     Left = 0
     Top = 73
-    Width = 411
-    Height = 252
+    Width = 407
+    Height = 251
     Align = alClient
     BevelOuter = bvNone
     Caption = 'pnlCentral'
@@ -40,8 +40,8 @@ object Frm_Usuario: TFrm_Usuario
     ShowCaption = False
     TabOrder = 1
     StyleName = 'Windows'
-    ExplicitWidth = 407
-    ExplicitHeight = 251
+    ExplicitWidth = 403
+    ExplicitHeight = 250
     object lbl_Nome: TLabel
       Left = 4
       Top = 43
@@ -138,7 +138,7 @@ object Frm_Usuario: TFrm_Usuario
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 411
+    Width = 407
     Height = 41
     Align = alTop
     BevelOuter = bvNone
@@ -146,7 +146,7 @@ object Frm_Usuario: TFrm_Usuario
     ParentBackground = False
     TabOrder = 2
     StyleName = 'Windows'
-    ExplicitWidth = 407
+    ExplicitWidth = 403
     object imgicon: TImage
       Left = 0
       Top = 0
@@ -236,8 +236,8 @@ object Frm_Usuario: TFrm_Usuario
   end
   object pnlBaixo: TPanel
     Left = 0
-    Top = 325
-    Width = 411
+    Top = 324
+    Width = 407
     Height = 35
     Align = alBottom
     BevelOuter = bvNone
@@ -245,8 +245,8 @@ object Frm_Usuario: TFrm_Usuario
     ParentBackground = False
     TabOrder = 3
     StyleName = 'Windows'
-    ExplicitTop = 324
-    ExplicitWidth = 407
+    ExplicitTop = 323
+    ExplicitWidth = 403
     object btnSalvar: TBitBtn
       Left = 165
       Top = 6

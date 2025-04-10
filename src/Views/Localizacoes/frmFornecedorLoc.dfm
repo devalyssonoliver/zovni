@@ -5,8 +5,8 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Localizar Fornecedor'
-  ClientHeight = 521
-  ClientWidth = 938
+  ClientHeight = 520
+  ClientWidth = 934
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,8 +23,8 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
   TextHeight = 15
   object pnlBaixo: TPanel
     Left = 0
-    Top = 480
-    Width = 938
+    Top = 479
+    Width = 934
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
@@ -32,8 +32,6 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
     ParentBackground = False
     TabOrder = 2
     StyleName = 'Windows'
-    ExplicitTop = 479
-    ExplicitWidth = 934
     object btnNovo: TBitBtn
       Left = 8
       Top = 6
@@ -250,20 +248,18 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
   object pnlMeio: TPanel
     Left = 0
     Top = 41
-    Width = 938
-    Height = 439
+    Width = 934
+    Height = 438
     Align = alClient
     BevelOuter = bvNone
     Color = clWhite
     ParentBackground = False
     TabOrder = 1
     StyleName = 'Windows'
-    ExplicitWidth = 934
-    ExplicitHeight = 438
     object pnlFuncoesBusca: TPanel
       Left = 0
       Top = 0
-      Width = 938
+      Width = 934
       Height = 41
       Align = alTop
       BevelOuter = bvNone
@@ -277,7 +273,6 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
       ParentFont = False
       TabOrder = 0
       StyleName = 'Windows'
-      ExplicitWidth = 934
       object cbbModoDeBusca: TComboBox
         Left = 8
         Top = 6
@@ -409,13 +404,11 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
     object pnlGrid: TPanel
       Left = 0
       Top = 41
-      Width = 938
-      Height = 398
+      Width = 934
+      Height = 397
       Align = alClient
       Caption = 'pnlGrid'
       TabOrder = 1
-      ExplicitWidth = 934
-      ExplicitHeight = 397
       object dbgrd: TDBGrid
         Left = 1
         Top = 1
@@ -489,7 +482,7 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
   object pnlTopo: TPanel
     Left = 0
     Top = 0
-    Width = 938
+    Width = 934
     Height = 41
     Align = alTop
     BevelOuter = bvNone
@@ -497,7 +490,6 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
-    ExplicitWidth = 934
     object imgicon: TImage
       AlignWithMargins = True
       Left = 3

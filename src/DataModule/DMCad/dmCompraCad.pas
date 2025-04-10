@@ -3,7 +3,7 @@ unit dmCompraCad;
 interface
 
 uses
-  System.SysUtils, System.Classes, Gerenciador;
+  System.SysUtils, System.Classes;
 
 type
   TDataModule1 = class(TDataModule)

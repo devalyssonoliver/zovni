@@ -224,6 +224,11 @@
         </DCCReference>
         <DCCReference Include="..\Classes\zBackup.pas"/>
         <DCCReference Include="..\Interfaces\Backup.pas"/>
+        <DCCReference Include="..\Units\uCredManager.pas"/>
+        <DCCReference Include="..\Views\Configuracoes\frmEntradaSenha.pas">
+            <Form>Frm_EntradaSenha</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

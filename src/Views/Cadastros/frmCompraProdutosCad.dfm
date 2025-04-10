@@ -3,8 +3,8 @@ object Frm_CompraCad: TFrm_CompraCad
   Top = 0
   BorderIcons = [biSystemMenu]
   Caption = 'Cadastro de Compra'
-  ClientHeight = 430
-  ClientWidth = 670
+  ClientHeight = 429
+  ClientWidth = 666
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,7 +17,7 @@ object Frm_CompraCad: TFrm_CompraCad
   object pnlTopo: TPanel
     Left = 0
     Top = 0
-    Width = 670
+    Width = 666
     Height = 49
     Align = alTop
     BevelOuter = bvNone
@@ -95,7 +95,7 @@ object Frm_CompraCad: TFrm_CompraCad
   object pnlButtons: TPanel
     Left = 0
     Top = 49
-    Width = 670
+    Width = 666
     Height = 48
     Align = alTop
     BevelOuter = bvNone
@@ -218,8 +218,8 @@ object Frm_CompraCad: TFrm_CompraCad
   end
   object pnlBaixo: TPanel
     Left = 0
-    Top = 395
-    Width = 670
+    Top = 394
+    Width = 666
     Height = 35
     Align = alBottom
     BevelOuter = bvNone
@@ -228,10 +228,10 @@ object Frm_CompraCad: TFrm_CompraCad
     TabOrder = 4
     StyleName = 'Windows'
     DesignSize = (
-      670
+      666
       35)
     object btnSalvar: TBitBtn
-      Left = 165
+      Left = 157
       Top = 6
       Width = 75
       Height = 25
@@ -294,7 +294,7 @@ object Frm_CompraCad: TFrm_CompraCad
       StyleName = 'Windows11 White Smoke'
     end
     object btnNovo: TBitBtn
-      Left = 4
+      Left = -4
       Top = 6
       Width = 75
       Height = 25
@@ -357,7 +357,7 @@ object Frm_CompraCad: TFrm_CompraCad
       StyleName = 'Windows11 White Smoke'
     end
     object btnEditar: TBitBtn
-      Left = 84
+      Left = 76
       Top = 6
       Width = 75
       Height = 25
@@ -420,7 +420,7 @@ object Frm_CompraCad: TFrm_CompraCad
       StyleName = 'Windows11 White Smoke'
     end
     object btnFechar: TBitBtn
-      Left = 590
+      Left = 582
       Top = 6
       Width = 75
       Height = 25
@@ -432,7 +432,7 @@ object Frm_CompraCad: TFrm_CompraCad
       StyleName = 'Windows11 White Smoke'
     end
     object btnCancelar: TBitBtn
-      Left = 246
+      Left = 238
       Top = 6
       Width = 75
       Height = 25
@@ -447,8 +447,8 @@ object Frm_CompraCad: TFrm_CompraCad
   object dbgrd_Produtos_Compra: TDBGrid
     Left = 0
     Top = 97
-    Width = 670
-    Height = 298
+    Width = 666
+    Height = 297
     Align = alClient
     BorderStyle = bsNone
     DrawingStyle = gdsGradient
@@ -522,7 +522,7 @@ object Frm_CompraCad: TFrm_CompraCad
   object pnlAddProdutos: TPanel
     Left = 0
     Top = 97
-    Width = 670
+    Width = 666
     Height = 0
     Align = alTop
     BevelOuter = bvNone

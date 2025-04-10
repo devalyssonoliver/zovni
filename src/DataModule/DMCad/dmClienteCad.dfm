@@ -4,7 +4,6 @@ object DM_ClientesCad: TDM_ClientesCad
   Height = 376
   Width = 361
   object fdqryClientesCad: TFDQuery
-    Active = True
     Connection = DM_Gerenciador.fdConnection
     SQL.Strings = (
       'SELECT * FROM clientes')

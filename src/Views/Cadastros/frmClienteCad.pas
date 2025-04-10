@@ -4,9 +4,9 @@ interface
 
 uses
   Winapi.Windows, System.Classes, Vcl.Controls, Vcl.Forms, Vcl.ExtCtrls,
-  Vcl.StdCtrls, Vcl.DBCtrls, Vcl.Mask, Vcl.ComCtrls, Data.DB, Vcl.Buttons,
+  Vcl.StdCtrls, Vcl.DBCtrls, Vcl.ComCtrls, Data.DB, Vcl.Buttons,
   dmClienteCad, UFuncoesAuxiliares, Vcl.Imaging.pngimage, System.SysUtils,
-  System.ImageList, Vcl.ImgList;
+  System.ImageList, Vcl.ImgList, Vcl.Mask;
 
 type
   TModoOperacao = (tpNovo, tpEditar, tpExibir);

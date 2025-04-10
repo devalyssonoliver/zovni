@@ -3,10 +3,12 @@ unit dmClienteCad;
 interface
 
 uses
-  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
-  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
-  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB, Gerenciador,
-  FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  System.SysUtils, System.Classes,
+  FireDAC.Stan.Param,
+  Data.DB, Gerenciador,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt;
 
 type
   TDM_ClientesCad = class(TDataModule)

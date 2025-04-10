@@ -5,13 +5,13 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Ribbon,
-  Vcl.ActnCtrls, Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnMenus, Vcl.RibbonActnMenus,
+  Vcl.ActnMan, Vcl.ActnMenus, Vcl.RibbonActnMenus,
   System.Actions, Vcl.ActnList, Vcl.RibbonSilverStyleActnCtrls,
   Vcl.PlatformDefaultStyleActnCtrls, Vcl.RibbonLunaStyleActnCtrls,
   Vcl.RibbonObsidianStyleActnCtrls, Vcl.Buttons, Vcl.ComCtrls, Vcl.Menus,
   Vcl.ExtCtrls, frmClienteLoc, frmProdutoLoc, frmLogin, frmCompraProdutosCad,
-  Vcl.Imaging.pngimage, Vcl.Imaging.jpeg, ShellApi, System.ImageList,
-  Vcl.ImgList, Vcl.StdCtrls;
+  Vcl.Imaging.pngimage, Vcl.Imaging.jpeg, ShellApi,
+  Vcl.StdCtrls, Vcl.ToolWin, Vcl.ActnCtrls;
 
 type
   TFrm_Principal = class(TForm)
@@ -60,7 +60,7 @@ var
 implementation
 
 uses
-  frmClienteCad, frmFornecedorLoc, frmSplashScreen, frmUsuarioCad, Vcl.GraphUtil,
+  frmFornecedorLoc, frmSplashScreen, frmUsuarioCad, Vcl.GraphUtil,
   frmBackup;
 
 {$R *.dfm}

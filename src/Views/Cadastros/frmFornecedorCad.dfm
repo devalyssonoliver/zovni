@@ -4,8 +4,8 @@ object Form_FornecedorCad: TForm_FornecedorCad
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Cadastro Fornecedor'
-  ClientHeight = 388
-  ClientWidth = 637
+  ClientHeight = 387
+  ClientWidth = 633
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,7 +22,7 @@ object Form_FornecedorCad: TForm_FornecedorCad
   object pnlTopo: TPanel
     Left = 0
     Top = 0
-    Width = 637
+    Width = 633
     Height = 41
     Align = alTop
     BevelOuter = bvNone
@@ -30,7 +30,6 @@ object Form_FornecedorCad: TForm_FornecedorCad
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
-    ExplicitWidth = 633
     object lblTITULO: TLabel
       AlignWithMargins = True
       Left = 71
@@ -210,8 +209,8 @@ object Form_FornecedorCad: TForm_FornecedorCad
   end
   object pnlBaixo: TPanel
     Left = 0
-    Top = 353
-    Width = 637
+    Top = 352
+    Width = 633
     Height = 35
     Align = alBottom
     BevelOuter = bvNone
@@ -219,8 +218,6 @@ object Form_FornecedorCad: TForm_FornecedorCad
     ParentBackground = False
     TabOrder = 2
     StyleName = 'Windows'
-    ExplicitTop = 352
-    ExplicitWidth = 633
     object btnSalvar: TBitBtn
       Left = 165
       Top = 6
@@ -439,15 +436,13 @@ object Form_FornecedorCad: TForm_FornecedorCad
   object pgcCadastro: TPageControl
     Left = 0
     Top = 41
-    Width = 637
-    Height = 312
+    Width = 633
+    Height = 311
     ActivePage = tsCad
     Align = alClient
     Style = tsFlatButtons
     TabOrder = 1
     StyleName = 'Windows11 White Smoke'
-    ExplicitWidth = 633
-    ExplicitHeight = 311
     object tsCad: TTabSheet
       Caption = 'Cadastro'
       object grpInfo: TGroupBox

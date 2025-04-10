@@ -25,7 +25,7 @@ object Frm_Backup: TFrm_Backup
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
-    ExplicitWidth = 642
+    ExplicitWidth = 641
     object lblTITULO: TLabel
       AlignWithMargins = True
       Left = 84
@@ -299,8 +299,8 @@ object Frm_Backup: TFrm_Backup
     ParentBackground = False
     TabOrder = 1
     StyleName = 'Windows'
-    ExplicitWidth = 642
-    ExplicitHeight = 391
+    ExplicitWidth = 641
+    ExplicitHeight = 211
     object pg_Configs: TPageControl
       Left = 0
       Top = 0
@@ -310,6 +310,8 @@ object Frm_Backup: TFrm_Backup
       Align = alClient
       TabOrder = 0
       StyleName = 'Windows11 White Smoke'
+      ExplicitWidth = 641
+      ExplicitHeight = 211
       object tsNow: TTabSheet
         Caption = 'Executar'
         object lbledt_DiretorioBackup: TLabeledEdit
@@ -448,6 +450,8 @@ object Frm_Backup: TFrm_Backup
           Align = alBottom
           TabOrder = 3
           StyleName = 'Windows11 White Smoke'
+          ExplicitTop = 164
+          ExplicitWidth = 633
         end
       end
     end

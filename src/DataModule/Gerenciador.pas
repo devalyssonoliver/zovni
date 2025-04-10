@@ -3,11 +3,13 @@ unit Gerenciador;
 interface
 
 uses
-  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
-  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
-  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
-  FireDAC.Phys.PGDef, FireDAC.Phys.PG, Data.DB, FireDAC.Comp.Client, IArquivoConfig, zArquivoConfig,
-  Vcl.Forms;
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf,
+
+  FireDAC.Phys,
+  FireDAC.Phys.PG, FireDAC.Comp.Client, IArquivoConfig, zArquivoConfig,
+  Vcl.Forms, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf,
+  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async,
+  FireDAC.Phys.PGDef, FireDAC.VCLUI.Wait, Data.DB;
 
 type
   TDM_Gerenciador = class(TDataModule)
@@ -46,7 +48,7 @@ begin
     fdConnection.Params.Add('Port=' + Config.Porta);
     fdConnection.Params.Add('LoginTimeout=2');
     fdConnection.Params.UserName := Config.User;
-    fdConnection.Params.Password := Config.Pass;
+    fdConnection.Params.Password :=  GetEnvironmentVariable('PGPASSWORD');
     pgDriver.VendorLib := IncludeTrailingPathDelimiter(ExtractFilePath(Application.ExeName)) + 'libpq.dll';
     fdConnection.Connected := True;
   except

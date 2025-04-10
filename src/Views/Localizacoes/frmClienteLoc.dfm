@@ -5,8 +5,8 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Localizar Cliente'
-  ClientHeight = 531
-  ClientWidth = 882
+  ClientHeight = 530
+  ClientWidth = 878
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,7 +21,7 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
   object pnlTopo: TPanel
     Left = 0
     Top = 0
-    Width = 882
+    Width = 878
     Height = 41
     Align = alTop
     BevelOuter = bvNone
@@ -29,7 +29,6 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
-    ExplicitWidth = 878
     object imgicon: TImage
       Left = 0
       Top = 0
@@ -120,20 +119,18 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
   object pnlMeio: TPanel
     Left = 0
     Top = 41
-    Width = 882
-    Height = 449
+    Width = 878
+    Height = 448
     Align = alClient
     BevelOuter = bvNone
     Color = clWhite
     ParentBackground = False
     TabOrder = 1
     StyleName = 'Windows'
-    ExplicitWidth = 878
-    ExplicitHeight = 448
     object pnlFuncoesBusca: TPanel
       Left = 0
       Top = 0
-      Width = 882
+      Width = 878
       Height = 41
       Align = alTop
       BevelOuter = bvNone
@@ -147,7 +144,6 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
       ParentFont = False
       TabOrder = 0
       StyleName = 'Windows'
-      ExplicitWidth = 878
       object cbbModoDeBusca: TComboBox
         Left = 8
         Top = 6
@@ -277,13 +273,11 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
     object pnlGrid: TPanel
       Left = 0
       Top = 41
-      Width = 882
-      Height = 408
+      Width = 878
+      Height = 407
       Align = alClient
       Caption = 'pnlGrid'
       TabOrder = 1
-      ExplicitWidth = 878
-      ExplicitHeight = 407
       object dbgrd: TDBGrid
         Left = 1
         Top = 1
@@ -381,8 +375,8 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
   end
   object pnlBaixo: TPanel
     Left = 0
-    Top = 490
-    Width = 882
+    Top = 489
+    Width = 878
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
@@ -390,8 +384,6 @@ object Frm_ClienteLoc: TFrm_ClienteLoc
     ParentBackground = False
     TabOrder = 2
     StyleName = 'Windows'
-    ExplicitTop = 489
-    ExplicitWidth = 878
     object btnNovo: TBitBtn
       Left = 8
       Top = 6

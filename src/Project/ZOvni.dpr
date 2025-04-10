@@ -35,7 +35,9 @@ uses
   dmCompraCad in '..\DataModule\DMCad\dmCompraCad.pas' {DataModule1: TDataModule},
   frmBackup in '..\Views\Configuracoes\frmBackup.pas' {Frm_Backup},
   zBackup in '..\Classes\zBackup.pas',
-  Backup in '..\Interfaces\Backup.pas';
+  Backup in '..\Interfaces\Backup.pas',
+  uCredManager in '..\Units\uCredManager.pas',
+  frmEntradaSenha in '..\Views\Configuracoes\frmEntradaSenha.pas' {Frm_EntradaSenha};
 
 {$R *.res}
 
@@ -58,7 +60,6 @@ begin
   except
     on E: Exception do
     begin
-      Application.MessageBox('Não foi possível conectar!' + sLineBreak + 'Configure as informações de acesso.', 'ZOvni - Gestão', MB_ICONERROR);
       Application.CreateForm(TFrm_Config, Frm_Config);
       Frm_Config.ShowModal;
     end;

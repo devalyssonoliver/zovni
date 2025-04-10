@@ -3,8 +3,8 @@ object Frm_Principal: TFrm_Principal
   Top = 0
   ParentCustomHint = False
   BorderStyle = bsSingle
-  ClientHeight = 809
-  ClientWidth = 1344
+  ClientHeight = 808
+  ClientWidth = 1340
   Color = clWhite
   TransparentColor = True
   Font.Charset = DEFAULT_CHARSET
@@ -21,8 +21,8 @@ object Frm_Principal: TFrm_Principal
   OnCreate = FormCreate
   OnPaint = FormPaint
   DesignSize = (
-    1344
-    809)
+    1340
+    808)
   TextHeight = 16
   object btnGithub: TSpeedButton
     Left = 1184
@@ -33,7 +33,7 @@ object Frm_Principal: TFrm_Principal
   object spl: TSplitter
     Left = 0
     Top = 143
-    Height = 644
+    Height = 643
     ExplicitLeft = 186
     ExplicitTop = 198
     ExplicitHeight = 589
@@ -41,18 +41,20 @@ object Frm_Principal: TFrm_Principal
   object imgWalpaper: TImage
     Left = 3
     Top = 143
-    Width = 1341
-    Height = 644
+    Width = 1337
+    Height = 643
     Align = alClient
     ExplicitLeft = 8
     ExplicitTop = 145
+    ExplicitWidth = 1341
+    ExplicitHeight = 644
   end
   object img_LogoBackground: TImage
     AlignWithMargins = True
     Left = 6
     Top = 146
-    Width = 1335
-    Height = 441
+    Width = 1331
+    Height = 440
     Hint = 'Saiba mais sobre o projeto scaneando o QR-CODE. '
     Margins.Bottom = 200
     Align = alClient
@@ -1588,10 +1590,12 @@ object Frm_Principal: TFrm_Principal
       4E44AE426082}
     ExplicitLeft = 9
     ExplicitTop = 143
+    ExplicitWidth = 1335
+    ExplicitHeight = 441
   end
   object img_QRCODE: TImage
-    Left = 1112
-    Top = 552
+    Left = 1108
+    Top = 551
     Width = 217
     Height = 177
     Cursor = crHandPoint
@@ -2921,10 +2925,12 @@ object Frm_Principal: TFrm_Principal
     Proportional = True
     Stretch = True
     OnClick = img_QRCODEClick
+    ExplicitLeft = 1112
+    ExplicitTop = 552
   end
   object lbl_QrCode: TLabel
-    Left = 1124
-    Top = 735
+    Left = 1120
+    Top = 734
     Width = 205
     Height = 32
     Anchors = [akRight, akBottom]
@@ -2937,11 +2943,13 @@ object Frm_Principal: TFrm_Principal
     ParentFont = False
     WordWrap = True
     StyleName = 'Windows'
+    ExplicitLeft = 1124
+    ExplicitTop = 735
   end
   object rbnMenu: TRibbon
     Left = 0
     Top = 0
-    Width = 1344
+    Width = 1340
     Height = 143
     ActionManager = actmgr2
     ApplicationMenu.CommandType = ctCommands
@@ -2970,19 +2978,17 @@ object Frm_Principal: TFrm_Principal
       end>
     TabIndex = 2
     UseCustomFrame = False
-    ExplicitWidth = 1340
     DesignSize = (
-      1344
+      1340
       143)
     StyleName = 'Ribbon - Obsidian'
     object accessbar: TRibbonQuickAccessToolbar
       Left = 0
       Top = 0
-      Width = 1344
+      Width = 1340
       Height = 24
       Cursor = crHandPoint
       ActionManager = actmgr2
-      ExplicitWidth = 1340
     end
     object appMenu: TRibbonApplicationMenuBar
       ActionManager = actmgr2
@@ -2992,11 +2998,10 @@ object Frm_Principal: TFrm_Principal
     object Cadastros: TRibbonPage
       Left = 0
       Top = 50
-      Width = 1343
+      Width = 1339
       Height = 93
       Caption = 'Cadastros'
       Index = 0
-      ExplicitWidth = 1339
       object rbgroupinfobasic: TRibbonGroup
         Left = 4
         Top = 3
@@ -3938,11 +3943,10 @@ object Frm_Principal: TFrm_Principal
     object CadastrosMoviment: TRibbonPage
       Left = 0
       Top = 50
-      Width = 1343
+      Width = 1339
       Height = 93
       Caption = 'Movimenta'#231#245'es'
       Index = 1
-      ExplicitWidth = 1339
       object movimentacoes: TRibbonGroup
         Left = 4
         Top = 3
@@ -4179,11 +4183,10 @@ object Frm_Principal: TFrm_Principal
     object rbnpgConfiguracoes: TRibbonPage
       Left = 0
       Top = 50
-      Width = 1343
+      Width = 1339
       Height = 93
       Caption = 'Configura'#231#245'es'
       Index = 2
-      ExplicitWidth = 1339
       object rbngrpmGrupoConfig: TRibbonGroup
         Left = 4
         Top = 3
@@ -4349,12 +4352,10 @@ object Frm_Principal: TFrm_Principal
   end
   object stat: TStatusBar
     Left = 0
-    Top = 787
-    Width = 1344
+    Top = 786
+    Width = 1340
     Height = 22
     Panels = <>
-    ExplicitTop = 786
-    ExplicitWidth = 1340
   end
   object actmgr2: TActionManager
     ActionBars = <

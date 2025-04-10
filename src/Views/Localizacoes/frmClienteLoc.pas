@@ -7,7 +7,7 @@ uses
   System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
   Vcl.ExtCtrls, Vcl.Imaging.pngimage, Data.DB, Vcl.Grids, Vcl.DBGrids,
   Vcl.StdCtrls, Vcl.Buttons, dmClienteLoc, frmClienteCad, Vcl.ComCtrls,
-  System.ImageList, Vcl.ImgList;
+  Vcl.ImgList, System.ImageList;
 
 type
   TFrm_ClienteLoc = class(TForm)

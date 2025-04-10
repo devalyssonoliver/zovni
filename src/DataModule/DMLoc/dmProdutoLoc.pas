@@ -3,10 +3,12 @@ unit dmProdutoLoc;
 interface
 
 uses
-  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
-  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
-  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
-  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Gerenciador;
+  System.SysUtils, System.Classes,
+  FireDAC.Stan.Param,
+  Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Gerenciador, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt;
 
 type
   TModoBusca = (mdId, mdNome);

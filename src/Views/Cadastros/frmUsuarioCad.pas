@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
   Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.StdCtrls, Vcl.Buttons, Vcl.Imaging.pngimage,
-  Data.DB, Vcl.Mask, dmUsuario;
+  Data.DB, dmUsuario, Vcl.Mask;
 
 type
   TModoOperacao = (mdNovo, mdEditar, mdExibir);

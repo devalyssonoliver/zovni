@@ -4,8 +4,8 @@
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Cadastro de Produto'
-  ClientHeight = 351
-  ClientWidth = 678
+  ClientHeight = 350
+  ClientWidth = 674
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,7 +20,7 @@
   object pnlTopo: TPanel
     Left = 0
     Top = 0
-    Width = 678
+    Width = 674
     Height = 41
     Align = alTop
     BevelOuter = bvNone
@@ -28,7 +28,6 @@
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
-    ExplicitWidth = 640
     object lblTITULO: TLabel
       AlignWithMargins = True
       Left = 71
@@ -85,8 +84,8 @@
   end
   object pnlBaixo: TPanel
     Left = 0
-    Top = 316
-    Width = 678
+    Top = 315
+    Width = 674
     Height = 35
     Align = alBottom
     BevelOuter = bvNone
@@ -94,7 +93,6 @@
     ParentBackground = False
     TabOrder = 2
     StyleName = 'Windows'
-    ExplicitWidth = 640
     object btnSalvar: TBitBtn
       Left = 165
       Top = 6
@@ -311,32 +309,30 @@
   object pnlMeio: TPanel
     Left = 0
     Top = 41
-    Width = 678
-    Height = 275
+    Width = 674
+    Height = 274
     Align = alClient
     BevelOuter = bvNone
     Color = clWhite
     ParentBackground = False
     TabOrder = 1
     StyleName = 'Windows'
-    ExplicitWidth = 640
     object pgcModulos: TPageControl
       Left = 0
       Top = 0
-      Width = 678
-      Height = 275
+      Width = 674
+      Height = 274
       ActivePage = tsCadastroProd
       Align = alClient
       TabOrder = 0
       StyleName = 'Windows11 White Smoke'
-      ExplicitWidth = 640
       object tsCadastroProd: TTabSheet
         Caption = 'Cadastro'
         object grpInforBasic: TGroupBox
           AlignWithMargins = True
           Left = 3
           Top = 3
-          Width = 664
+          Width = 660
           Height = 380
           ParentCustomHint = False
           Align = alTop
@@ -360,7 +356,6 @@
           ShowHint = False
           TabOrder = 0
           StyleName = 'Windows11 White Smoke'
-          ExplicitWidth = 626
           object lblNome: TLabel
             Left = 3
             Top = 39

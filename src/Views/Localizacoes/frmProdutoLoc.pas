@@ -5,8 +5,9 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB,
-  Vcl.StdCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids,
-  Vcl.Buttons, dmProdutoLoc, System.ImageList, Vcl.ImgList, frmProdutoCad;
+  Vcl.StdCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.DBGrids,
+  Vcl.Buttons, dmProdutoLoc, frmProdutoCad, System.ImageList, Vcl.ImgList,
+  Vcl.Grids;
 
 type
   TFrm_ProdutoLoc = class(TForm)

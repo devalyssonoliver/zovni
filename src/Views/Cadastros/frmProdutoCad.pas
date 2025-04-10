@@ -6,8 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
   Vcl.StdCtrls, Vcl.Buttons, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls,
-  Vcl.DBCtrls, Data.DB, Vcl.Mask, Vcl.Grids, Vcl.DBGrids, dmProdutoCad,
-  UFuncoesAuxiliares, System.ImageList, Vcl.ImgList;
+  Vcl.DBCtrls, Data.DB, Vcl.Mask, Vcl.DBGrids, dmProdutoCad,
+  UFuncoesAuxiliares, System.ImageList, Vcl.ImgList, Vcl.Grids;
 
 type
   TModoOperacao = (tpNovo, tpEditar, tpExibir);
