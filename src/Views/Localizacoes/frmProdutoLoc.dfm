@@ -4,9 +4,9 @@ object Frm_ProdutoLoc: TFrm_ProdutoLoc
   Hint = 'Localizar Produtos'
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'Localizar Porduto'
+  Caption = 'Localizar Produto'
   ClientHeight = 549
-  ClientWidth = 904
+  ClientWidth = 919
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,7 +22,7 @@ object Frm_ProdutoLoc: TFrm_ProdutoLoc
   object pnlBaixo: TPanel
     Left = 0
     Top = 508
-    Width = 904
+    Width = 919
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
@@ -159,8 +159,8 @@ object Frm_ProdutoLoc: TFrm_ProdutoLoc
       OnClick = btnExcluirClick
     end
     object btnFechar: TBitBtn
-      Left = 829
-      Top = 5
+      Left = 837
+      Top = 6
       Width = 75
       Height = 25
       Caption = '&Fechar'
@@ -247,7 +247,7 @@ object Frm_ProdutoLoc: TFrm_ProdutoLoc
   object pnlMeio: TPanel
     Left = 0
     Top = 41
-    Width = 904
+    Width = 919
     Height = 467
     Align = alClient
     BevelOuter = bvNone
@@ -260,7 +260,7 @@ object Frm_ProdutoLoc: TFrm_ProdutoLoc
     object pnlFuncoesBusca: TPanel
       Left = 0
       Top = 0
-      Width = 904
+      Width = 919
       Height = 41
       Align = alTop
       BevelOuter = bvNone
@@ -404,7 +404,7 @@ object Frm_ProdutoLoc: TFrm_ProdutoLoc
     object pnlGrid: TPanel
       Left = 0
       Top = 41
-      Width = 904
+      Width = 919
       Height = 426
       Align = alClient
       Caption = 'pnlGrid'
@@ -414,7 +414,7 @@ object Frm_ProdutoLoc: TFrm_ProdutoLoc
       object dbgrd: TDBGrid
         Left = 1
         Top = 1
-        Width = 902
+        Width = 917
         Height = 424
         Align = alClient
         BorderStyle = bsNone
@@ -505,7 +505,7 @@ object Frm_ProdutoLoc: TFrm_ProdutoLoc
   object pnlTopo: TPanel
     Left = 0
     Top = 0
-    Width = 904
+    Width = 919
     Height = 41
     Align = alTop
     BevelOuter = bvNone

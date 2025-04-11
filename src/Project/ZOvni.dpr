@@ -37,7 +37,8 @@ uses
   zBackup in '..\Classes\zBackup.pas',
   Backup in '..\Interfaces\Backup.pas',
   uCredManager in '..\Units\uCredManager.pas',
-  frmEntradaSenha in '..\Views\Configuracoes\frmEntradaSenha.pas' {Frm_EntradaSenha};
+  frmEntradaSenha in '..\Views\Configuracoes\frmEntradaSenha.pas' {Frm_EntradaSenha},
+  frmLoginNew in '..\Views\Configuracoes\frmLoginNew.pas' {Frm_LoginNew};
 
 {$R *.res}
 
@@ -46,6 +47,7 @@ begin
   Application.MainFormOnTaskbar := True;
   TStyleManager.TrySetStyle('Windows11 White Smoke');
   Application.CreateForm(TDM_Gerenciador, DM_Gerenciador);
+  Application.CreateForm(TFrm_LoginNew, Frm_LoginNew);
   try
     DM_Gerenciador.fdConnection.Connected := True;
     Application.CreateForm(TFrm_Loginn, Frm_Loginn);

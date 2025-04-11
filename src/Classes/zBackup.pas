@@ -30,7 +30,7 @@ begin
   Config := TArquivoJson.Create;
   try
     Config.LerArquivoConfig;
-    SetEnvironmentVariable('PGPASSWORD', 'postzeus2011');
+    SetEnvironmentVariable('PGPASSWORD', 'null');
 
     DirApp := ExtractFilePath(ParamStr(0));
     PgDumpPath := IncludeTrailingPathDelimiter(DirApp) + 'pg_dump.exe';

@@ -5,9 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB,
-  Vcl.StdCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.DBGrids,
-  Vcl.Buttons, dmProdutoLoc, frmProdutoCad, System.ImageList, Vcl.ImgList,
-  Vcl.Grids;
+  Vcl.StdCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.DBGrids, Vcl.Buttons,
+  dmProdutoLoc, frmProdutoCad, System.ImageList, Vcl.ImgList, Vcl.Grids;
 
 type
   TFrm_ProdutoLoc = class(TForm)
@@ -137,7 +136,7 @@ end;
 procedure TFrm_ProdutoLoc.FormCreate(Sender: TObject);
 begin
   FProdutoDM := TDM_ProdutoLoc.Create(nil);
-  dbgrd.DataSource.DataSet.Active := True;
+  dsProdutoLoc.DataSet.Active := True;
 end;
 
 procedure TFrm_ProdutoLoc.FormDestroy(Sender: TObject);
@@ -155,7 +154,6 @@ begin
       mdNome:
         FProdutoDM.Buscar(edtNome.Text, mdNome);
     end;
-
     dbgrd.DataSource := dsProdutoLoc;
     if dsProdutoLoc.DataSet.IsEmpty then
       Application.MessageBox('Sem resultados para a consulta', 'ZOvni', MB_ICONWARNING);

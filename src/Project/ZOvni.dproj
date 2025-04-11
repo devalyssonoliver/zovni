@@ -229,6 +229,10 @@
             <Form>Frm_EntradaSenha</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\Views\Configuracoes\frmLoginNew.pas">
+            <Form>Frm_LoginNew</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

@@ -32,6 +32,8 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
     ParentBackground = False
     TabOrder = 2
     StyleName = 'Windows'
+    ExplicitTop = 478
+    ExplicitWidth = 930
     object btnNovo: TBitBtn
       Left = 8
       Top = 6
@@ -256,6 +258,8 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
     ParentBackground = False
     TabOrder = 1
     StyleName = 'Windows'
+    ExplicitWidth = 930
+    ExplicitHeight = 437
     object pnlFuncoesBusca: TPanel
       Left = 0
       Top = 0
@@ -273,6 +277,7 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
       ParentFont = False
       TabOrder = 0
       StyleName = 'Windows'
+      ExplicitWidth = 930
       object cbbModoDeBusca: TComboBox
         Left = 8
         Top = 6
@@ -409,11 +414,13 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
       Align = alClient
       Caption = 'pnlGrid'
       TabOrder = 1
+      ExplicitWidth = 930
+      ExplicitHeight = 396
       object dbgrd: TDBGrid
         Left = 1
         Top = 1
-        Width = 936
-        Height = 396
+        Width = 932
+        Height = 395
         Align = alClient
         BorderStyle = bsNone
         DataSource = dsFornecedorLoc
@@ -490,6 +497,7 @@ object Frm_FornecedorLoc: TFrm_FornecedorLoc
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
+    ExplicitWidth = 930
     object imgicon: TImage
       AlignWithMargins = True
       Left = 3
